@@ -31,6 +31,20 @@
 (prelude-install-packages)
 
 
+;; When started from Emacs.app or similar, ensure $PATH
+;; is the same the user would see in Terminal.app
+;; https://github.com/purcell/emacs.d/blob/master/init-exec-path.el
+(defun set-exec-path-from-shell-PATH ()
+  (let ((path-from-shell (replace-regexp-in-string
+                          "[ \t\n]*$"
+                          ""
+                          (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
+    (setenv "PATH" path-from-shell)
+    (setq exec-path (split-string path-from-shell path-separator))))
+
+(when (or (eq window-system 'ns) (eq window-system 'x))
+  (set-exec-path-from-shell-PATH))
+
 (when (eq window-system 'x)
   (setq browse-url-generic-program (executable-find "google-chrome")
         browse-url-browser-function 'browse-url-generic))
@@ -57,6 +71,7 @@
 (load-local-file "etc/ido.el")
 (load-local-file "etc/cosmetics.el")
 (load-local-file "etc/yasnippet.el")
+(load-local-file "etc/flyspell.el")
 
 
 ;; backups
