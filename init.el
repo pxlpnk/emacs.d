@@ -56,6 +56,7 @@
 (load-local-file "etc/org-mode.el")
 (load-local-file "etc/ido.el")
 (load-local-file "etc/cosmetics.el")
+(load-local-file "etc/yasnippet.el")
 
 
 ;; backups
