@@ -54,6 +54,7 @@
 
 (load-local-file "etc/keys.el")
 (load-local-file "etc/org-mode.el")
+(load-local-file "etc/ido.el")
 
 
 
