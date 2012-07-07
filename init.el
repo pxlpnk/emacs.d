@@ -9,7 +9,7 @@
 
 (defvar prelude-packages
   '(expand-region magit magithub melpa
-                   volatile-highlights yasnippet flymake ruby-mode)
+                   volatile-highlights yasnippet flymake ruby-mode rinari ruby-end)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -55,9 +55,17 @@
 (load-local-file "etc/keys.el")
 (load-local-file "etc/org-mode.el")
 (load-local-file "etc/ido.el")
+(load-local-file "etc/cosmetics.el")
 
 
-
+;; backups
+(setq make-backup-files t ;; do make backups
+  backup-by-copying t     ;; and copy them here
+  backup-directory-alist '(("." . "~/.emacs.d/cache/backups")) 
+  version-control t
+  kept-new-versions 2
+  kept-old-versions 5
+  delete-old-versions t)
 
 
 

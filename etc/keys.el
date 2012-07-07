@@ -17,3 +17,9 @@
 
 
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-c g") 'gtd)
+
+
+(global-set-key (kbd "RET")         'newline-and-indent)
+(global-set-key (kbd "<delete>")    'delete-char)  ; delete == delete    
+(global-set-key (kbd "M-g")         'goto-line)    ; M-g  'goto-line
