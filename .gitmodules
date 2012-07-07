@@ -1,0 +1,6 @@
+[submodule "lib/snippets/ruby-mode"]
+	path = lib/snippets/ruby-mode
+	url = git://github.com/bmaland/yasnippet-ruby-mode.git
+[submodule "themes/bubbleberry"]
+	path = themes/bubbleberry
+	url = git://gist.github.com/3027622.git
