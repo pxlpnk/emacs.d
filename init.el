@@ -72,7 +72,7 @@
 (load-local-file "etc/cosmetics.el")
 (load-local-file "etc/yasnippet.el")
 (load-local-file "etc/flyspell.el")
-
+(load-local-file "etc/built-in.el")
 
 ;; backups
 (setq make-backup-files t ;; do make backups
@@ -82,7 +82,6 @@
   kept-new-versions 2
   kept-old-versions 5
   delete-old-versions t)
-
 
 
 (server-start)

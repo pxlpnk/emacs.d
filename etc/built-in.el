@@ -5,6 +5,8 @@
 (prefer-coding-system 'utf-8)
 (ansi-color-for-comint-mode-on)
 
+(global-auto-revert-mode t)
+
 (set-default 'indent-tabs-mode nil)
 (auto-compression-mode t)
 (show-paren-mode 1)
@@ -13,9 +15,3 @@
 
 
 (setq confirm-nonexistent-file-or-buffer nil)
-
-;; backups and auto-saves go to the temp dir
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
