@@ -1,6 +1,6 @@
 emacs.d
 =======
-my personal config file collected from different ressources
+my personal config files, collected from different ressources
 
 Structure
 --------
