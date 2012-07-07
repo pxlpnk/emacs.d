@@ -51,3 +51,14 @@
 (add-subdirs-to-load-path "lib")
 
 (load-local-file "themes/bubbleberry/bubbleberry-theme.el")
+
+(load-local-file "etc/keys.el")
+(load-local-file "etc/org-mode.el")
+
+
+
+
+
+
+(server-start)
+
