@@ -75,12 +75,14 @@
 (load-local-file "etc/built-in.el")
 (load-local-file "etc/highlight-symbol.el")
 (load-local-file "etc/full-ack.el")
+(load-local-file "etc/ruby-mode.el")
+(load-local-file "etc/fly-make-ruby.el")
 
 (load-local-file "etc/keys.el")
 ;; backups
 (setq make-backup-files t ;; do make backups
   backup-by-copying t     ;; and copy them here
-  backup-directory-alist '(("." . "~/.emacs.d/cache/backups")) 
+  backup-directory-alist '(("." . "~/.emacs.d/cache/backups"))
   version-control t
   kept-new-versions 2
   kept-old-versions 5
@@ -88,4 +90,3 @@
 
 
 (server-start)
-
