@@ -9,7 +9,7 @@
 
 (defvar prelude-packages
   '(expand-region magit magithub melpa
-                   volatile-highlights yasnippet flymake ruby-mode rinari ruby-end)
+                   volatile-highlights yasnippet flymake ruby-mode rinari ruby-end highlight-symbol)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -66,14 +66,16 @@
 
 (load-local-file "themes/bubbleberry/bubbleberry-theme.el")
 
-(load-local-file "etc/keys.el")
+
 (load-local-file "etc/org-mode.el")
 (load-local-file "etc/ido.el")
 (load-local-file "etc/cosmetics.el")
 (load-local-file "etc/yasnippet.el")
 (load-local-file "etc/flyspell.el")
 (load-local-file "etc/built-in.el")
+(load-local-file "etc/highlight-symbol.el")
 
+(load-local-file "etc/keys.el")
 ;; backups
 (setq make-backup-files t ;; do make backups
   backup-by-copying t     ;; and copy them here
