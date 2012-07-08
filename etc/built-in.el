@@ -29,3 +29,7 @@
 
 (when window-system
   (global-set-key (kbd "C-x C-c") 'ask-before-closing))
+
+
+
+(windmove-default-keybindings 'meta)
