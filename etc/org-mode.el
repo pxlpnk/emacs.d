@@ -4,5 +4,5 @@
 
 (defun gtd ()
    (interactive)
-   (find-file "~/Dropbox/Documents/Notes/gtd.org")
+   (find-file "~/Documents/Notes/org/gtd.org")
  )
