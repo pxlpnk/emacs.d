@@ -64,7 +64,7 @@
 (add-local-path "lib")
 (add-subdirs-to-load-path "lib")
 
-(load-local-file "themes/bubbleberry/bubbleberry-theme.el")
+(load-local-file "themes/tomorrow-night-eighties.el")
 
 
 (load-local-file "etc/org-mode.el")
