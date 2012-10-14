@@ -1,5 +1,5 @@
 (require 'yasnippet)
-(yas/initialize)
+
 
 (add-hook 'ruby-mode-hook
           '(lambda ()
