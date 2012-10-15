@@ -3,9 +3,10 @@
 (setq org-todo-keywords '((sequence "TODO(t)" "DONE(d)")
                           (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE" "|" "FIXED(f)")))
 
+;; FIXME: how to deal with different workstations and different todos?
 (defun gtd ()
    (interactive)
-   (find-file "~/Documents/Notes/org/gtd.org")
+   (find-file "~/Documents/Notes/gtd.org")
  )
 
 
@@ -19,3 +20,23 @@
 ")
         ("j" "Journal" entry (file+datetree "~/Documents/Notes/org/journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((R . t)
+   (emacs-lisp . t)
+   (gnuplot . t)
+   (haskell . nil)
+   (latex . t)
+   (ledger . t)         ;this is the important one for this tutorial
+   (ruby . t)
+   (screen . nil)
+   (sh . t)
+   (sql . nil)
+   (sqlite . t)))
+
+;; Mobile Org
+
+(setq org-directory "~/Documents/Notes")
+(setq org-mobile-inbox-for-pull "~/Documents/Notes/flagged.org")
+
+(setq org-mobile-directory "~/Dropbox/MobileOrg")
