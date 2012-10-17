@@ -40,3 +40,11 @@
 (setq org-mobile-inbox-for-pull "~/Documents/Notes/flagged.org")
 
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
+
+
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+(setq org-agenda-files (list "~/Documents/Notes"))
+(setq org-startup-truncated nil)
