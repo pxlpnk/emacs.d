@@ -9,7 +9,7 @@
 
 (defvar prelude-packages
   '(expand-region magit magithub melpa
-                   volatile-highlights yasnippet flymake ruby-mode rinari ruby-end highlight-symbol full-ack)
+                   volatile-highlights yasnippet flymake ruby-mode rinari ruby-end highlight-symbol full-ack projectile)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -78,6 +78,7 @@
 (load-local-file "etc/ruby-mode.el")
 (load-local-file "etc/fly-make-ruby.el")
 (load-local-file "etc/haskell-mode.el")
+(load-local-file "etc/projectile.el")
 
 (load-local-file "etc/keys.el")
 ;; backups
