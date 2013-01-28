@@ -66,7 +66,7 @@
 
 (load-local-file "themes/tomorrow-night-eighties.el")
 
-
+(load-local-file "etc/magit.el")
 (load-local-file "etc/org-mode.el")
 (load-local-file "etc/ido.el")
 (load-local-file "etc/cosmetics.el")
