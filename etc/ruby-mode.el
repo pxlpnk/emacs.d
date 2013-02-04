@@ -1,5 +1,7 @@
 (require 'ruby-mode)
 
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode)
+
 (eval-after-load "ruby-mode"
   '(progn
      ;; style
