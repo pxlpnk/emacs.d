@@ -9,7 +9,7 @@
 
 (defvar prelude-packages
   '(expand-region magit magithub melpa
-                   volatile-highlights yasnippet flymake ruby-mode rinari ruby-end highlight-symbol full-ack projectile git-gutter)
+                   volatile-highlights yasnippet flymake ruby-mode rinari ruby-end ruby-electric highlight-symbol full-ack projectile git-gutter)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
