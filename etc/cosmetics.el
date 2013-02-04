@@ -36,3 +36,7 @@
 
 
 (setq visible-bell 'top-bottom)
+
+
+(if (fboundp 'fringe-mode)
+    (fringe-mode 4))
