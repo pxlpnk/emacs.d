@@ -6,8 +6,8 @@
            (or (file-remote-p default-directory 'host) system-name)
            (file-name-nondirectory (or (buffer-file-name) default-directory)))))
 
-(setq inhibit-startup-message t          ;; don't show ...
-  inhibit-startup-echo-area-message t)   ;; ... startup messages
+;; (setq inhibit-startup-message t          ;; don't show ...
+;;   inhibit-startup-echo-area-message t)   ;; ... startup messages
 (setq require-final-newline t)           ;; end files with a newline
 
 (menu-bar-mode  -1)                       ;; show the menu...
