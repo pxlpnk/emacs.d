@@ -1,3 +1,5 @@
+
+
 (require 'cl)
 (require 'package)
 (add-to-list 'package-archives
@@ -80,6 +82,7 @@
 (load-local-file "etc/haskell-mode.el")
 (load-local-file "etc/projectile.el")
 (load-local-file "etc/git-gutter.el")
+(load-local-file "etc/hippie-expand.el")
 
 (load-local-file "etc/keys.el")
 ;; backups
