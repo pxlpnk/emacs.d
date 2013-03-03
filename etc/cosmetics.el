@@ -43,4 +43,4 @@
 
 (load-local-file "themes/molokai.el")
 (load-local-file "themes/almost-monokai.el")
-(color-theme-almost-monokai)
+(color-theme-molokai)
