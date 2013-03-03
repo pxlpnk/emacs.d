@@ -1,17 +1,20 @@
-
-
 (require 'cl)
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                           ("marmalade" . "http://marmalade-repo.org/packages/")
+                           ("melpa" . "http://melpa.milkbox.net/packages/")))
+;; (add-to-list 'package-archives
+;;             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 ;; required because of a package.el bug
 (setq url-http-attempt-keepalives nil)
 
 (defvar prelude-packages
-  '(expand-region magit magithub melpa
-                   volatile-highlights yasnippet flymake ruby-mode rinari ruby-end ruby-electric highlight-symbol full-ack projectile git-gutter)
+  '(expand-region color-theme flymake full-ack git-gutter
+                  highlight-symbol magit magithub melpa
+                  projectile rinari ruby-electric ruby-end
+                  ruby-mode volatile-highlights yasnippet )
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -66,7 +69,8 @@
 (add-local-path "lib")
 (add-subdirs-to-load-path "lib")
 
-(load-local-file "themes/tomorrow-night-eighties.el")
+;; (load-local-file "themes/tomorrow-night-eighties.el")
+
 
 (load-local-file "etc/magit.el")
 (load-local-file "etc/org-mode.el")
