@@ -12,7 +12,7 @@
 
 (defvar prelude-packages
   '(expand-region color-theme flymake full-ack git-gutter
-                  highlight-symbol magit magithub melpa
+                  highlight-symbol magit magithub melpa pomodoro
                   projectile rinari ruby-electric ruby-end
                   ruby-mode volatile-highlights yasnippet )
   "A list of packages to ensure are installed at launch.")

@@ -48,3 +48,7 @@
 
 (setq org-agenda-files (list "~/Documents/Notes"))
 (setq org-startup-truncated nil)
+
+
+(require 'pomodoro)
+(pomodoro-add-to-mode-line)
