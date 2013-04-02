@@ -11,6 +11,8 @@
 (auto-compression-mode t)
 (show-paren-mode 1)
 
+(global-hl-line-mode +1)
+
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 
@@ -36,3 +38,5 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (display-time-mode 1)
+
+(add-hook 'before-save-hook 'time-stamp)
