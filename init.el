@@ -87,6 +87,7 @@
 (load-local-file "etc/projectile.el")
 (load-local-file "etc/git-gutter.el")
 (load-local-file "etc/hippie-expand.el")
+(load-local-file "etc/zone.el")
 
 (load-local-file "etc/keys.el")
 ;; backups
