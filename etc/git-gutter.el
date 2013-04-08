@@ -1,15 +1,12 @@
 (require 'git-gutter)
 
+(add-hook 'ruby-mode-hook 'git-gutter-mode)
+
 ;; bind git-gutter toggle command
 (global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
 
-;; Update changes information after save buffer
-(add-hook 'after-save-hook
-          (lambda ()
-            (when (zerop (call-process-shell-command "git rev-parse --show-toplevel"))
-              (git-gutter))))
-
 (setq git-gutter:window-width 2)
+(setq git-gutter:update-hooks '(after-save-hook after-revert-hook))
 
 (setq git-gutter:modified-sign "  ") ;; two space
 (setq git-gutter:added-sign "++")    ;; multiple character is OK
