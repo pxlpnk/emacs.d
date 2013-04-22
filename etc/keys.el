@@ -1,4 +1,7 @@
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
 (setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
 
 (setq-default indent-tabs-mode nil)   ;; don't use tabs to indent
 (setq-default tab-width 2)            ;; but maintain correct appearance
