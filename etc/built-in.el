@@ -40,3 +40,7 @@
 (display-time-mode 1)
 
 (add-hook 'before-save-hook 'time-stamp)
+
+
+;;auto scroll compilation window
+(setq compilation-scroll-output 'first-error)

@@ -3,8 +3,7 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                            ("marmalade" . "http://marmalade-repo.org/packages/")
                            ("melpa" . "http://melpa.milkbox.net/packages/")))
-;; (add-to-list 'package-archives
-;;             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (package-initialize)
 
 ;; required because of a package.el bug
@@ -12,7 +11,7 @@
 
 (defvar prelude-packages
   '(expand-region color-theme flymake full-ack git-gutter
-                  highlight-symbol magit magithub melpa pomodoro
+                  highlight-symbol magit magithub melpa pomodoro powerline
                   projectile rinari ruby-electric ruby-end
                   ruby-mode volatile-highlights yasnippet )
   "A list of packages to ensure are installed at launch.")

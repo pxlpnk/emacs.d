@@ -41,6 +41,14 @@
 (if (fboundp 'fringe-mode)
     (fringe-mode 4))
 
-(load-local-file "themes/molokai.el")
-(load-local-file "themes/almost-monokai.el")
+;; (load-local-file "themes/molokai.el")
+;; (load-local-file "themes/almost-monokai.el")
 ;;(color-theme-molokai)
+
+(load-local-file "themes/color-theme-heroku.el")
+(color-theme-heroku)
+
+
+
+;; powerline
+(powerline-default-theme)
