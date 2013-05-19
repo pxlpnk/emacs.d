@@ -52,3 +52,8 @@
 
 ;; powerline
 (powerline-default-theme)
+
+;; comments should have smaller font
+
+(custom-set-faces
+ '(font-lock-comment-face ((t (:height 0.8)))))
