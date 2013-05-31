@@ -12,7 +12,7 @@
 (defvar prelude-packages
   '(expand-region color-theme flymake full-ack git-gutter
                   highlight-symbol magit magithub melpa pomodoro powerline
-                  projectile rinari ruby-electric ruby-end
+                  projectile rinari ruby-electric ruby-end rvm rspec-mode
                   ruby-mode volatile-highlights yasnippet )
   "A list of packages to ensure are installed at launch.")
 
@@ -86,6 +86,7 @@
 (load-local-file "etc/projectile.el")
 (load-local-file "etc/git-gutter.el")
 (load-local-file "etc/hippie-expand.el")
+(load-local-file "etc/rspec.el")
 ;; (load-local-file "etc/zone.el")  ;; needs too much cpu
 
 (load-local-file "etc/keys.el")
