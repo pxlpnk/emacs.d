@@ -45,8 +45,9 @@
 ;; (load-local-file "themes/almost-monokai.el")
 ;;(color-theme-molokai)
 
-(load-local-file "themes/color-theme-heroku.el")
-(color-theme-heroku)
+;;(load-local-file "themes/color-theme-heroku.el")
+(load-local-file "themes/mesa-theme.el")
+;;(color-theme-heroku)
 
 
 
