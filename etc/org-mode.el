@@ -16,10 +16,12 @@
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Documents/Notes/org/gtd.org" "Tasks")
-         "* TODO %?\n  %i\n  %a
-")
+         "* TODO %?\n  %i\n  %a")
         ("j" "Journal" entry (file+datetree "~/Documents/Notes/org/journal.org")
-         "* %?\nEntered on %U\n  %i\n  %a")))
+         "* %?\nEntered on %U\n  %i\n  %a")
+        ("b" "Bak Journal" entry (file+datetree "~/Documents/Notes/org/bak_journal.org")
+         "* %?\nEntered on %U\n  %i\n")))
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((R . t)

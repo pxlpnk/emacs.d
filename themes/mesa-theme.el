@@ -5,8 +5,9 @@
  'mesa
  '(fringe-mode 6 nil (fringe) )
  '(linum-format     " %7d "   )
- '(powerline-color1 "grey40"  )
- '(powerline-color2 "grey50"  )
+ '(powerline-color1 "#222")
+ '(powerline-color1 "#222")
+ '(powerline-arrow-shape 'rounded)
  )
 
 ;; Comment
