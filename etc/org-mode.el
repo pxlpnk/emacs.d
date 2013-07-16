@@ -19,7 +19,7 @@
          "* TODO %?\n  %i\n  %a")
         ("j" "Journal" entry (file+datetree "~/Documents/Notes/org/journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")
-        ("b" "Bak Journal" entry (file+datetree "~/Documents/Notes/org/bak_journal.org")
+        ("d" "Logbook" entry (file+datetree "~/Documents/Notes/org/logbook.org")
          "* %?\nEntered on %U\n  %i\n")))
 
 (org-babel-do-load-languages
