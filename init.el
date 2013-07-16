@@ -10,10 +10,10 @@
 (setq url-http-attempt-keepalives nil)
 
 (defvar prelude-packages
-  '(expand-region color-theme flymake full-ack git-gutter
+  '(expand-region color-theme flymake full-ack git-gutter hackernews
                   highlight-symbol magit magithub melpa pomodoro powerline
                   projectile rinari ruby-electric ruby-end rvm rspec-mode
-                  ruby-mode volatile-highlights yasnippet )
+                  ruby-mode twittering-mode volatile-highlights yasnippet )
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
