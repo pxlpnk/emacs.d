@@ -46,8 +46,11 @@
 ;;(color-theme-molokai)
 
 ;;(load-local-file "themes/color-theme-heroku.el")
-(load-local-file "themes/mesa-theme.el")
+;;(load-local-file "themes/mesa-theme.el")
 ;;(color-theme-heroku)
+;; (load-theme 'solarized-[light|dark] t)
+(load-theme 'solarized-dark t)
+
 
 
 

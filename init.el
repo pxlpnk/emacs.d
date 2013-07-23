@@ -13,7 +13,7 @@
   '(expand-region color-theme flymake full-ack git-gutter hackernews
                   highlight-symbol magit magithub melpa pomodoro powerline
                   projectile rinari ruby-electric ruby-end rvm rspec-mode
-                  ruby-mode twittering-mode volatile-highlights yasnippet )
+                  ruby-mode solarized-theme twittering-mode volatile-highlights yasnippet )
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
