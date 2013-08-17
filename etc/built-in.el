@@ -44,3 +44,8 @@
 
 ;;auto scroll compilation window
 (setq compilation-scroll-output 'first-error)
+
+
+;; Use mutt in emacs:
+
+(add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
