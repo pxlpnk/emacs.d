@@ -21,7 +21,7 @@
  '(linum                               ((t (:foreground "#8D8B87"      :background "#D4D0CA"          :height 70                                      ))))
  '(minibuffer-prompt                   ((t (:foreground "DeepSkyBlue4" :background nil                :weight bold                                    ))))
  '(escape-glyph                        ((t (:foreground "orange"       :background nil                                                                ))))
- '(highlight                           ((t (:foreground "#004A4F"      :background "DarkOrange"                                                       ))))
+ '(highlight                           ((t (:foreground "#004A4F"      :background "LightGrey"                                                       ))))
  '(region                              ((t (:foreground "#F8F8F8"      :background "#D4D0CA"                                                          ))))
  '(shadow                              ((t (:foreground "#999999"                                                                                     ))))
  '(secondary-selection                 ((t (                           :background "grey20"                                                           ))))
