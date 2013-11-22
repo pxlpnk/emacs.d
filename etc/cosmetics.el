@@ -48,14 +48,14 @@
 ;;(load-local-file "themes/color-theme-heroku.el")
 ;;(load-local-file "themes/mesa-theme.el")
 ;;(color-theme-heroku)
-;; (load-theme 'solarized-[light|dark] t)
-(load-theme 'solarized-dark t)
+;; (load-theme 'solarized-dark t)
+;; (load-theme 'solarized-light t)
 
 
 
 
 ;; powerline
-(require 'powerline)
+;;(require 'powerline)
 (setq powerline-color1 "#222")      ;; dark grey;
 (setq powerline-color2 "#444")      ;; slightly lighter grey
 ;; (powerline-default-theme)

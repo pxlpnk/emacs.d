@@ -3,3 +3,7 @@ auto-save-list
 cache
 *.cache
 url/
+bookmarks
+eshell/
+projectile-bookmarks.eld
+tramp

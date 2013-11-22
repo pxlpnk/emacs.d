@@ -10,10 +10,10 @@
 (setq url-http-attempt-keepalives nil)
 
 (defvar prelude-packages
-  '(expand-region color-theme flymake full-ack git-gutter hackernews
-                  highlight-symbol magit magithub melpa pomodoro powerline
-                  projectile rinari ruby-electric ruby-end rvm rspec-mode
-                  ruby-mode solarized-theme twittering-mode volatile-highlights yasnippet )
+  '(expand-region color-theme flymake full-ack git-gutter
+                  highlight-symbol magit markdown-mode melpa powerline
+                  projectile rinari ruby-electric ruby-end rbenv rspec-mode
+                  ruby-mode volatile-highlights yasnippet )
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -71,25 +71,26 @@
 ;; (load-local-file "themes/tomorrow-night-eighties.el")
 
 
-(load-local-file "etc/magit.el")
-(load-local-file "etc/org-mode.el")
-(load-local-file "etc/ido.el")
-(load-local-file "etc/cosmetics.el")
-(load-local-file "etc/yasnippet.el")
-(load-local-file "etc/flyspell.el")
-(load-local-file "etc/built-in.el")
-(load-local-file "etc/highlight-symbol.el")
-(load-local-file "etc/full-ack.el")
-(load-local-file "etc/ruby-mode.el")
-(load-local-file "etc/fly-make-ruby.el")
-(load-local-file "etc/haskell-mode.el")
-(load-local-file "etc/projectile.el")
-(load-local-file "etc/git-gutter.el")
-(load-local-file "etc/hippie-expand.el")
-(load-local-file "etc/rspec.el")
+;; (load-local-file "etc/magit.el")
+;; (load-local-file "etc/org-mode.el")
+;; (load-local-file "etc/ido.el")
+;; (load-local-file "etc/cosmetics.el")
+;; (load-local-file "etc/yasnippet.el")
+;; (load-local-file "etc/flyspell.el")
+;; (load-local-file "etc/built-in.el")
+;; (load-local-file "etc/highlight-symbol.el")
+;; (load-local-file "etc/full-ack.el")
+;; (load-local-file "etc/ruby-mode.el")
+;; (load-local-file "etc/fly-make-ruby.el")
+;; (load-local-file "etc/haskell-mode.el")
+;; (load-local-file "etc/projectile.el")
+;; (load-local-file "etc/git-gutter.el")
+;; (load-local-file "etc/hippie-expand.el")
+;; (load-local-file "etc/rspec.el")
 ;; (load-local-file "etc/zone.el")  ;; needs too much cpu
 
 (load-local-file "etc/keys.el")
+
 ;; backups
 (setq make-backup-files t ;; do make backups
   backup-by-copying t     ;; and copy them here
