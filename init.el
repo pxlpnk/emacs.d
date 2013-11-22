@@ -1,19 +1,23 @@
 (require 'cl)
 (require 'package)
+(package-initialize)
+
+(setq package-enable-at-startup nil)
+
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                            ("marmalade" . "http://marmalade-repo.org/packages/")
                            ("melpa" . "http://melpa.milkbox.net/packages/")))
 
-(package-initialize)
 
 ;; required because of a package.el bug
-(setq url-http-attempt-keepalives nil)
+;; (setq url-http-attempt-keepalives nil)
 
 (defvar prelude-packages
   '(expand-region color-theme flymake full-ack git-gutter
                   highlight-symbol magit markdown-mode melpa powerline
-                  projectile rinari ruby-electric ruby-end rbenv rspec-mode
-                  ruby-mode volatile-highlights yasnippet )
+                  projectile rinari rbenv rspec-mode enh-ruby-mode
+                  volatile-highlights yasnippet
+                  highlight-indentation grizzl auto-complete )
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -71,23 +75,25 @@
 ;; (load-local-file "themes/tomorrow-night-eighties.el")
 
 
-;; (load-local-file "etc/magit.el")
-;; (load-local-file "etc/org-mode.el")
-;; (load-local-file "etc/ido.el")
-;; (load-local-file "etc/cosmetics.el")
+(load-local-file "etc/magit.el")
+(load-local-file "etc/enh-ruby-mode.el")
+(load-local-file "etc/projectile.el")
+(load-local-file "etc/org-mode.el")
+(load-local-file "etc/ido.el")
+(load-local-file "etc/cosmetics.el")
+(load-local-file "etc/flyspell.el")
+(load-local-file "etc/built-in.el")
+(load-local-file "etc/full-ack.el")
+(load-local-file "etc/auto-complete.el")
 ;; (load-local-file "etc/yasnippet.el")
-;; (load-local-file "etc/flyspell.el")
-;; (load-local-file "etc/built-in.el")
+
 ;; (load-local-file "etc/highlight-symbol.el")
-;; (load-local-file "etc/full-ack.el")
+
 ;; (load-local-file "etc/ruby-mode.el")
 ;; (load-local-file "etc/fly-make-ruby.el")
 ;; (load-local-file "etc/haskell-mode.el")
-;; (load-local-file "etc/projectile.el")
-;; (load-local-file "etc/git-gutter.el")
-;; (load-local-file "etc/hippie-expand.el")
-;; (load-local-file "etc/rspec.el")
-;; (load-local-file "etc/zone.el")  ;; needs too much cpu
+
+(load-local-file "etc/git-gutter.el")
 
 (load-local-file "etc/keys.el")
 

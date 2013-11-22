@@ -15,7 +15,6 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-
 (setq confirm-nonexistent-file-or-buffer nil)
 
 ;; http://nileshk.com/2009/06/13/prompt-before-closing-emacs.html

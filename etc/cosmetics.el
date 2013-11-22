@@ -56,8 +56,8 @@
 
 ;; powerline
 ;;(require 'powerline)
-(setq powerline-color1 "#222")      ;; dark grey;
-(setq powerline-color2 "#444")      ;; slightly lighter grey
+;; (setq powerline-color1 "#222")      ;; dark grey;
+;; (setq powerline-color2 "#444")      ;; slightly lighter grey
 ;; (powerline-default-theme)
 
 ;; comments should have smaller font

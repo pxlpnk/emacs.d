@@ -1,6 +1,6 @@
 (require 'git-gutter)
 
-(add-hook 'ruby-mode-hook 'git-gutter-mode)
+(add-hook 'enh-ruby-mode-hook 'git-gutter-mode)
 
 ;; bind git-gutter toggle command
 (global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
