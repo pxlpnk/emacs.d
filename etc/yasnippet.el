@@ -1,11 +1,6 @@
 (require 'yasnippet)
+(require 'yasnippet-bundle)
 
-
-(add-hook 'ruby-mode-hook
+(add-hook 'enh-ruby-mode-hook
           '(lambda ()
              (yas/minor-mode)))
-
-(setq yas/root-directory (concat dotfiles-dir "lib/snippets"))
-;; Load the snippets
-(yas/load-directory yas/root-directory)
-

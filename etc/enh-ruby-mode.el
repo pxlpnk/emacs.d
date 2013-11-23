@@ -32,6 +32,4 @@
            (lambda () (highlight-indentation-current-column-mode)))
 
 
-
-
 (provide 'ruby-env)

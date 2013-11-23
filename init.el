@@ -16,7 +16,7 @@
   '(expand-region color-theme flymake full-ack git-gutter
                   highlight-symbol magit markdown-mode melpa powerline
                   projectile rinari rbenv rspec-mode enh-ruby-mode
-                  volatile-highlights yasnippet
+                  volatile-highlights yasnippet yasnippet-bundle
                   highlight-indentation grizzl auto-complete )
   "A list of packages to ensure are installed at launch.")
 
@@ -85,7 +85,7 @@
 (load-local-file "etc/built-in.el")
 (load-local-file "etc/full-ack.el")
 (load-local-file "etc/auto-complete.el")
-;; (load-local-file "etc/yasnippet.el")
+(load-local-file "etc/yasnippet.el")
 
 ;; (load-local-file "etc/highlight-symbol.el")
 
@@ -105,6 +105,5 @@
   kept-new-versions 2
   kept-old-versions 5
   delete-old-versions t)
-
 
 (server-start)
