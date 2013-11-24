@@ -17,7 +17,7 @@
                   highlight-symbol magit markdown-mode melpa powerline
                   projectile rinari rbenv rspec-mode enh-ruby-mode
                   volatile-highlights yasnippet yasnippet-bundle
-                  highlight-indentation grizzl auto-complete )
+                  highlight-indentation grizzl auto-complete haml-mode less-css-mode )
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
