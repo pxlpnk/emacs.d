@@ -62,3 +62,7 @@
 (global-set-key (kbd "C-c t") 'visit-term-buffer)
 
 (global-set-key [(f10)] (lambda () (interactive)(compile "make")))
+
+
+;; Opens the dash documentation
+(global-set-key "\C-cd" 'dash-at-point)
