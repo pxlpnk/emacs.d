@@ -18,9 +18,8 @@
       '(("t" "Todo" entry (file+headline "~/Documents/Notes/org/gtd.org" "Tasks")
          "* TODO %?\n  %i\n  %a")
         ("j" "Journal" entry (file+datetree "~/Documents/Notes/org/journal.org")
-         "* %?\nEntered on %U\n  %i\n  %a")
-        ("d" "Logbook" entry (file+datetree "~/Documents/Notes/org/logbook.org")
-         "* %?\nEntered on %U\n  %i\n")))
+         "* %U: %? %i\n")))
+
 
 (org-babel-do-load-languages
  'org-babel-load-languages
