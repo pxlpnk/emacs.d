@@ -1,18 +1,24 @@
 (require 'ansi-color)
 
 
-(setq-default
- frame-title-format
- '(:eval
-   (format "%s@%s:%s"
-           (or (file-remote-p default-directory 'user) user-login-name)
-           (or (file-remote-p default-directory 'host) system-name)
-           (file-name-nondirectory (or (buffer-file-name) default-directory)))))
+
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+
+;; (setq-default
+;;  frame-title-format
+;;  '(:eval
+;;    (format "%s@%s:%s"
+;;            (or (file-remote-p default-directory 'user) user-login-name)
+;;            (or (file-remote-p default-directory 'host) system-name)
+;;            (file-name-nondirectory (or (buffer-file-name) default-directory)))))
 
 ;; (setq inhibit-startup-message t          ;; don't show ...
 ;;   inhibit-startup-echo-area-message t)   ;; ... startup messages
 (setq require-final-newline t)           ;; end files with a newline
 
+(global-linum-mode t)
 (menu-bar-mode  t)                       ;; show the menu...
 (line-number-mode t)                     ;; show line numbers
 (column-number-mode t)                   ;; show column numbers
