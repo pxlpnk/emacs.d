@@ -14,7 +14,7 @@
 
 (defvar prelude-packages
   '(expand-region color-theme flymake full-ack git-gutter
-                  highlight-symbol magit markdown-mode melpa powerline
+                  highlight-symbol magit markdown-mode powerline
                   projectile rinari rbenv rspec-mode enh-ruby-mode
                   volatile-highlights yasnippet yasnippet-bundle
                   highlight-indentation grizzl auto-complete haml-mode less-css-mode )
