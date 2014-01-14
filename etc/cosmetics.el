@@ -1,6 +1,6 @@
 (require 'ansi-color)
 
-
+(setq ns-use-srgb-colorspace t)
 
 (setq frame-title-format
       (list (format "%s %%S: %%j " (system-name))
