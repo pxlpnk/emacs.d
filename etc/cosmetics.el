@@ -1,4 +1,5 @@
 (require 'ansi-color)
+(require 'linum)
 
 (setq ns-use-srgb-colorspace t)
 
@@ -25,7 +26,7 @@
 (size-indication-mode t)                 ;; show file size (emacs 22+)
 (tool-bar-mode -1)                       ;; turn-off toolbar
 
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 120)
 
 (when (eq window-system 'ns)
   (global-set-key (kbd "M-RET") 'ns-toggle-fullscreen))

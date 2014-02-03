@@ -20,32 +20,11 @@
         ("j" "Journal" entry (file+datetree "~/Documents/Notes/org/journal.org")
          "* %U: %? %i\n")))
 
-
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((R . t)
-   (emacs-lisp . t)
-   (gnuplot . t)
-   (haskell . nil)
-   (latex . t)
-   (ledger . t)         ;this is the important one for this tutorial
-   (ruby . t)
-   (screen . nil)
-   (sh . t)
-   (sql . nil)
-   (sqlite . t)))
-
-;; Mobile Org
-
 (setq org-directory "~/Documents/Notes")
-(setq org-mobile-inbox-for-pull "~/Documents/Notes/flagged.org")
-
-(setq org-mobile-directory "~/Dropbox/MobileOrg")
-
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
 (setq org-agenda-files (list "~/Documents/Notes"))
-(setq org-startup-truncated nil)
+(setq org-startup-truncated t)
