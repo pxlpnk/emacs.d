@@ -17,7 +17,8 @@
                   highlight-symbol magit markdown-mode powerline
                   projectile rinari rbenv rspec-mode enh-ruby-mode
                   volatile-highlights yasnippet yasnippet-bundle
-                  highlight-indentation grizzl auto-complete haml-mode less-css-mode linum-off )
+                  highlight-indentation grizzl auto-complete
+                  haml-mode less-css-mode notmuch)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -72,6 +73,9 @@
 (add-local-path "lib")
 (add-subdirs-to-load-path "lib")
 
+
+(load-local-file "lib/org-notmuch.el")
+
 ;; (load-local-file "themes/tomorrow-night-eighties.el")
 
 
@@ -119,6 +123,7 @@
    (quote
     ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" default)))
  '(fci-rule-color "#282a2e")
+ '(send-mail-function (quote mailclient-send-it))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
