@@ -43,23 +43,8 @@
   (forward-line -1)
   (indent-according-to-mode))
 
-
 (global-set-key [(control shift up)]  'move-line-up)
 (global-set-key [(control shift down)]  'move-line-down)
-
-
-(defun visit-term-buffer ()
-  "Create or visit a terminal buffer."
-  (interactive)
-  (if (not (get-buffer "*ansi-term*"))
-      (progn
-        (split-window-sensibly (selected-window))
-        (other-window 1)
-        (ansi-term (getenv "SHELL")))
-    (switch-to-buffer-other-window "*ansi-term*")))
-
-
-(global-set-key (kbd "C-c t") 'visit-term-buffer)
 
 (global-set-key [(f10)] (lambda () (interactive)(compile "make")))
 
