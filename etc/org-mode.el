@@ -28,3 +28,5 @@
 
 (setq org-agenda-files (list "~/Documents/Notes"))
 (setq org-startup-truncated t)
+
+(setq org-return-follows-link  t)
