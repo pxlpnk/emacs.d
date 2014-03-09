@@ -5,8 +5,9 @@
 (setq package-enable-at-startup nil)
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                           ("marmalade" . "http://marmalade-repo.org/packages/")
-                           ("melpa" . "http://melpa.milkbox.net/packages/")))
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")
+                         ("org" . "http://orgmode.org/elpa/")))
 
 
 ;; required because of a package.el bug
@@ -18,7 +19,7 @@
                   projectile rinari rbenv rspec-mode enh-ruby-mode
                   volatile-highlights yasnippet yasnippet-bundle
                   highlight-indentation grizzl auto-complete
-                  haml-mode less-css-mode notmuch)
+                  haml-mode less-css-mode notmuch org org-plus-contrib)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -74,11 +75,6 @@
 (add-subdirs-to-load-path "lib")
 
 
-(load-local-file "lib/org-notmuch.el")
-
-;; (load-local-file "themes/tomorrow-night-eighties.el")
-
-
 (load-local-file "etc/magit.el")
 (load-local-file "etc/enh-ruby-mode.el")
 (load-local-file "etc/projectile.el")
@@ -90,12 +86,6 @@
 (load-local-file "etc/full-ack.el")
 (load-local-file "etc/auto-complete.el")
 (load-local-file "etc/yasnippet.el")
-
-;; (load-local-file "etc/highlight-symbol.el")
-;; (load-local-file "etc/ruby-mode.el")
-;; (load-local-file "etc/fly-make-ruby.el")
-;; (load-local-file "etc/haskell-mode.el")
-;; (load-local-file "etc/git-gutter.el")
 
 (load-local-file "etc/keys.el")
 
