@@ -1,7 +1,7 @@
 (setq org-startup-indented t)
 
-(setq org-todo-keywords '((sequence "TODO(t)" "DONE(d)")
-                          (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE" "|" "FIXED(f)")))
+(setq org-todo-keywords '((sequence "TODO(t)" "WIP(w)" "DELEGATED(X)" "DONE(d)" )
+                          (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE" "FIXED(f)")))
 
 ;; FIXME: how to deal with different workstations and different todos?
 (defun gtd ()
@@ -30,3 +30,13 @@
 (setq org-startup-truncated t)
 
 (setq org-return-follows-link  t)
+
+
+;; Thanks to @plexus for helping me with this piece of code
+(defun insert-pivotal ()
+  (interactive)
+  (insert
+   (let* (
+          (url (x-get-clipboard))
+          (id (replace-regexp-in-string ".*/" "" url)))
+     (concat "[[" url "][\#"id"]]")) ))
