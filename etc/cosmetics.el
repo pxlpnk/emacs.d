@@ -21,30 +21,11 @@
 
 ;; (global-linum-mode t)
 (menu-bar-mode  t)                       ;; show the menu...
-(linum-mode t)                     ;; show line numbers
-(require 'linum-off)
 (column-number-mode t)                   ;; show column numbers
 (size-indication-mode t)                 ;; show file size (emacs 22+)
 (tool-bar-mode -1)                       ;; turn-off toolbar
 
 (set-face-attribute 'default nil :height 110)
-
-(when (eq window-system 'ns)
-  (global-set-key (kbd "M-RET") 'ns-toggle-fullscreen))
-
-
-(defun toggle-fullscreen ()
-  "Toggle full screen on X11"
-  (interactive)
-  (when (eq window-system 'x)
-    (set-frame-parameter
-     nil 'fullscreen
-     (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
-
-
-(when (eq window-system 'x)
-  (global-set-key (kbd "M-RET") 'toggle-fullscreen))
-
 
 (setq visible-bell 'top-bottom)
 

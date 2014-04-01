@@ -9,7 +9,7 @@
 
 (set-default 'indent-tabs-mode nil)
 (auto-compression-mode t)
-(show-paren-mode 1)
+(show-paren-mode t)
 
 (global-hl-line-mode +1)
 
@@ -32,7 +32,8 @@
   (global-set-key (kbd "C-x C-c") 'ask-before-closing))
 
 
-(windmove-default-keybindings 'meta)
+(windmove-default-keybindings 'hyper)
+
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 

@@ -74,7 +74,7 @@
 (add-local-path "lib")
 (add-subdirs-to-load-path "lib")
 
-(load-local-file "etc/notmuch.el")
+(load-local-file "etc/mu4e.el")
 (load-local-file "etc/magit.el")
 (load-local-file "etc/enh-ruby-mode.el")
 (load-local-file "etc/projectile.el")
