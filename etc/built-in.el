@@ -5,6 +5,9 @@
 (prefer-coding-system 'utf-8)
 (ansi-color-for-comint-mode-on)
 
+(which-function-mode)
+
+
 (global-auto-revert-mode t)
 
 (set-default 'indent-tabs-mode nil)
