@@ -14,7 +14,7 @@
 (auto-compression-mode t)
 (show-paren-mode t)
 
-(global-hl-line-mode +1)
+;; (global-hl-line-mode nil)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -44,11 +44,5 @@
 
 (add-hook 'before-save-hook 'time-stamp)
 
-
 ;;auto scroll compilation window
 (setq compilation-scroll-output 'first-error)
-
-
-;; Use mutt in emacs:
-
-(add-to-list 'auto-mode-alist '("/mutt" . mail-mode))

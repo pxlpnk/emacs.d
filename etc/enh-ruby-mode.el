@@ -31,5 +31,6 @@
  (add-hook 'enh-ruby-mode-hook
            (lambda () (highlight-indentation-current-column-mode)))
 
+(require 'ruby-mode)
 
 (provide 'ruby-env)

@@ -26,19 +26,17 @@
 (setq org-startup-indented t)
 
 (setq org-todo-keywords '((sequence "TODO(t)" "WIP(w)" "DELEGATED(X)" "DONE(d)" )
-                          (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE" "FIXED(f)")))
+                          (sequence "REPORT(r)" "BUG(b)" "WONTFIX(n)" "FIXED(f)")))
 
 ;; FIXME: how to deal with different workstations and different todos?
 (defun gtd-contentful ()
   (interactive)
-  (find-file "~/Dropbox/org/contentful/contentful_gtd.org")
-  )
+  (find-file "~/Dropbox/org/contentful/contentful_gtd.org"))
 
 
 (defun gtd ()
   (interactive)
-  (find-file "~/Dropbox/org/p/gtd.org")
-  )
+  (find-file "~/Dropbox/org/p/gtd.org"))
 
 
 
@@ -78,7 +76,7 @@
 (setq org-agenda-window-setup 'current-window)
 
 ;; Thanks to @plexus for helping me with this piece of code
-(defun insert-pivotal ()
+(defun insert-org-link ()
   (interactive)
   (insert
    (let* (
@@ -86,6 +84,8 @@
           (id (replace-regexp-in-string ".*/" "" url)))
      (concat "[[" url "][\#"id"]]")) ))
 
+
+(global-set-key (kbd "H-i") 'insert-org-link)
 
 ;; Mobile org
 ;; http://orgmode.org/manual/Setting-up-the-staging-area.html#Setting-up-the-staging-area

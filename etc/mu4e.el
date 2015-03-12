@@ -33,6 +33,11 @@
 (setq mu4e-get-mail-command "offlineimap"
       mu4e-update-interval 900) ;; update every 15 minutes
 
+;; try to encrypt messages automatically
+;; (setq mu4e-decryption-policy t)
+
+(setq smtpmail-queue-mail nil  ;; start in queuing mode
+      smtpmail-queue-dir   "~/Mail/anti/queue/cur")
 
 (setq
  user-mail-address "at@an-ti.eu"
@@ -70,3 +75,7 @@
              '( "maildir:/anti/INBOX"       "anti INBOX"     ?i))
 (add-to-list 'mu4e-bookmarks
              '( "maildir:/anti/Followup"       "Followup"     ?f))
+
+(setq send-mail-function 'smtpmail-send-it)
+(setq smtpmail-smtp-server "mail.an-ti.eu")
+(setq smtpmail-smtp-service 25)

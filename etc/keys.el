@@ -22,6 +22,7 @@
 
 
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "M-;") 'comment-line)
 (global-set-key (kbd "C-c e") 'mu4e)
 (global-set-key (kbd "H-e") 'mu4e)
 
@@ -37,6 +38,7 @@
 (global-set-key (kbd "C-x <down>") 'windmove-down)
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 (global-set-key (kbd "C-x <left>") 'windmove-left)
+
 
 (defun move-line-up ()
   "Move up the current line."

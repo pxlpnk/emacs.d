@@ -25,10 +25,11 @@
 (size-indication-mode t)                 ;; show file size (emacs 22+)
 (tool-bar-mode -1)                       ;; turn-off toolbar
 
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :height 100)
 
 (setq visible-bell 'top-bottom)
 
+(scroll-bar-mode -1)
 
 (if (fboundp 'fringe-mode)
     (fringe-mode 4))
@@ -44,7 +45,7 @@
 ;; (load-theme 'solarized-light t)
 
 
-
+(load-theme 'brin t)
 
 ;; powerline
 ;;(require 'powerline)

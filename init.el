@@ -77,13 +77,13 @@
 (add-local-path "lib")
 (add-subdirs-to-load-path "lib")
 
+(load-local-file "etc/cosmetics.el")
 (load-local-file "etc/mu4e.el")
 (load-local-file "etc/magit.el")
 (load-local-file "etc/enh-ruby-mode.el")
 (load-local-file "etc/projectile.el")
 (load-local-file "etc/org-mode.el")
 (load-local-file "etc/ido.el")
-(load-local-file "etc/cosmetics.el")
 (load-local-file "etc/flyspell.el")
 (load-local-file "etc/built-in.el")
 (load-local-file "etc/full-ack.el")
@@ -103,6 +103,7 @@
 
 ;; (load-theme 'tsdh-dark)
 ;; (find-file "~/Dropbox/Documents/Notes/gtd.org")
+
 (server-start)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -112,13 +113,20 @@
  '(ansi-color-faces-vector
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
-   (vector "#c5c8c6" "#cc6666" "#b5bd68" "#f0c674" "#81a2be" "#b294bb" "#8abeb7" "#1d1f21"))
- '(custom-enabled-themes (quote (sanityinc-tomorrow-bright)))
+   (vector "#eaeaea" "#d54e53" "#b9ca4a" "#e7c547" "#7aa6da" "#c397d8" "#70c0b1" "#000000"))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-eighties)))
  '(custom-safe-themes
    (quote
-    ("9fa173ced2e7a4d0a8e5aa702701629fa17b52c800391c37ea6678b8e790f7cd" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "1f70ca6096c886ca2a587bc10e2e8299ab835a1b95394a5f4e4d41bb76359633" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" default)))
- '(fci-rule-color "#282a2e")
+    ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
+ '(fci-rule-color "#424242")
  '(initial-buffer-choice "~/Dropbox/org/p/gtd.org")
+ '(linum-format " %5i ")
+ '(org-agenda-files
+   (quote
+    ("/Users/at/Dropbox/org/contentful/cheatsheet.org" "/Users/at/Dropbox/org/contentful/codequest.org" "/Users/at/Dropbox/org/p/bookmark.org" "/Users/at/Dropbox/org/p/books.org" "/Users/at/Dropbox/org/p/emacs.org" "/Users/at/Dropbox/org/p/erlang.org" "/Users/at/Dropbox/org/p/gtd.org" "/Users/at/Dropbox/org/p/index.org" "/Users/at/Dropbox/org/p/journal.org" "/Users/at/Dropbox/org/p/movies.org" "/Users/at/Dropbox/org/p/music.org" "/Users/at/Dropbox/org/p/refile.org" "/Users/at/Dropbox/org/p/safe.org" "/Users/at/Dropbox/org/p/shopping.org")))
+ '(package-selected-packages
+   (quote
+    (undo-tree magit-gh-pulls cider yasnippet-bundle yasnippet yaml-mode writeroom-mode volatile-highlights twittering-mode sublime-themes sonic-pi smartparens slim-mode sass-mode rspec-mode robe rinari rbenv puppet-mode projectile-rails powerline popwin pivotal-tracker php-mode paredit-everywhere org-plus-contrib org-mobile-sync org-magit org-mac-link oldlace-theme offlineimap obsidian-theme notmuch mu4e-maildirs-extension minimap markdown-mode linum-off less-css-mode js2-mode highlight-symbol highlight-indentation grizzl git-timemachine git-gutter full-ack flatui-theme expand-region epresent enh-ruby-mode emoji-display elscreen-separate-buffer-list edts ebib dash-at-point cyberpunk-theme company-inf-ruby color-theme-sanityinc-tomorrow color-theme color-identifiers-mode coffee-mode chef-mode busybee-theme auctex ag ack)))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "mail.an-ti.eu")
  '(smtpmail-smtp-service 25)
