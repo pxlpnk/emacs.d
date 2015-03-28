@@ -11,7 +11,7 @@
 
 
 
-;; Maggit 
+;; Maggit
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "M-;") 'comment-line)
 (global-set-key (kbd "C-c e") 'mu4e)
@@ -57,3 +57,5 @@
 (define-key global-map (kbd "C-c a") 'org-agenda)
 (define-key global-map (kbd "H-a") 'org-agenda)
 
+
+;; Cider

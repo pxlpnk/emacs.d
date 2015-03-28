@@ -15,6 +15,7 @@
    ;; Ruby
    rbenv
    enh-ruby-mode
+   robe
    ;; Erlang
    erlang
    ;; Navigation
@@ -24,6 +25,7 @@
    projectile
    git-gutter
    undo-tree
+   dash-at-point
    ;; Git
    magit
    ;; Color themes
@@ -38,6 +40,8 @@
    yasnippet
    yasnippet-bundle
    clojure-snippets
+   ;; markdown
+   markdown-mode
    ))
 
 

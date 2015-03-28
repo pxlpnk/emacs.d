@@ -16,6 +16,10 @@
 
 (setq enh-ruby-program rbenv-ruby-shim)
 
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
+
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
 
 (add-hook 'rspec-mode-hook
           '(lambda ()
