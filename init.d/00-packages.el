@@ -32,7 +32,7 @@
    org-plus-contrib
    org-magit
    ;; auto complete
-   auto-complete
+   company
    ;; ya-snippets
    yasnippet
    yasnippet-bundle
