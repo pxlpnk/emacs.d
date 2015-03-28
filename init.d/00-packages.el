@@ -33,6 +33,10 @@
    org-magit
    ;; auto complete
    auto-complete
+   ;; ya-snippets
+   yasnippet
+   yasnippet-bundle
+   clojure-snippets
    ))
 
 
