@@ -1,3 +1,7 @@
+;; start the server as first
+(server-mode)
+
+
 ;; Directories and file names
 (setq mk-emacs-init-file
       (or load-file-name buffer-file-name))
@@ -25,6 +29,7 @@
       `(("." . ,(expand-file-name (concat mk-emacs-config-dir "bak")))))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,7 +38,10 @@
  '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
  '(custom-safe-themes
    (quote
-    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default))))
+    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
+ '(package-selected-packages
+   (quote
+    (enh-ruby-mode smartparens rbenv rainbow-delimiters cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
