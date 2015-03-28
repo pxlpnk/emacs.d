@@ -41,7 +41,7 @@
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
  '(package-selected-packages
    (quote
-    (dash-at-point direx markdown-mode robe undo-tree company clojure-snippets yasnippet-bundle yasnippet enh-ruby-mode smartparens rbenv rainbow-delimiters cider))))
+    (erlang yasnippet-bundle undo-tree smartparens robe rbenv rainbow-delimiters markdown-mode enh-ruby-mode direx dash-at-point company clojure-snippets cider bubbleberry-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

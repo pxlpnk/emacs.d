@@ -5,4 +5,7 @@
 (smartparens-global-mode t)
 
 (add-hook 'after-init-hook 'smartparens-strict-mode)
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+(require 'undo-tree)
+(global-undo-tree-mode)

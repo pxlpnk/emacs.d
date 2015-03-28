@@ -10,7 +10,6 @@
 (setq-default tab-width 2)            ;; but maintain correct appearance
 
 
-
 ;; Maggit
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "M-;") 'comment-line)
