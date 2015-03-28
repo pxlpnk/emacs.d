@@ -25,8 +25,6 @@
       `(("." . ,(expand-file-name (concat mk-emacs-config-dir "bak")))))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
-
-(server-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

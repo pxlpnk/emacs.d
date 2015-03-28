@@ -10,17 +10,31 @@
  '(
    ;; Clojure
    smartparens
+   rainbow-delimiters
    cider
    ;; Ruby
-   rbenv enh-ruby-mode
+   rbenv
+   enh-ruby-mode
+   ;; Erlang
+   erlang
    ;; Navigation
-   helm helm-ag helm-projectile projectile git-gutter
+   helm
+   helm-ag
+   helm-projectile
+   projectile
+   git-gutter
    ;; Git
    magit
    ;; Color themes
    color-theme-sanityinc-tomorrow
    ;; ORG
-   org org-plus-contrib org-magit))
+   org
+   org-plus-contrib
+   org-magit
+   ;; auto complete
+   auto-complete
+   ))
+
 
 (unless package-archive-contents
   (package-refresh-contents))
