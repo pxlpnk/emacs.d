@@ -23,6 +23,7 @@
    helm-projectile
    projectile
    git-gutter
+   undo-tree
    ;; Git
    magit
    ;; Color themes
