@@ -18,6 +18,9 @@
 
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
 
+;; https://github.com/dgutov/robe/issues/36#issuecomment-74448398
+(setq robe-turn-on-eldoc nil)
+
 (eval-after-load 'company
   '(push 'company-robe company-backends))
 

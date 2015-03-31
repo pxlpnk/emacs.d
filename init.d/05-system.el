@@ -46,10 +46,6 @@
 (when window-system
   (global-set-key (kbd "C-x C-c") 'ask-before-closing))
 
-
-(windmove-default-keybindings 'hyper)
-
-
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (display-time-mode 1)
@@ -58,4 +54,3 @@
 
 ;;auto scroll compilation window
 (setq compilation-scroll-output 'first-error)
-

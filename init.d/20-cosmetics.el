@@ -1,7 +1,7 @@
 (require 'color-theme-sanityinc-tomorrow)
 (color-theme-sanityinc-tomorrow-night)
 
-(setq-default show-trailing-whitespace t)
+(setq-default show-trailing-whitespace nil)
 
 (require 'ansi-color)
 
@@ -18,7 +18,7 @@
 (tool-bar-mode -1)                       ;; turn-off toolbar
 
 
-(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'default nil :height 100)
 (setq visible-bell 'top-bottom)
 (scroll-bar-mode -1)
 
