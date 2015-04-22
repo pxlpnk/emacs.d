@@ -38,10 +38,11 @@
    company
    ;; ya-snippets
    yasnippet
-   yasnippet-bundle
-   clojure-snippets
+;;   yasnippet-bundle
+;;   clojure-snippets
    ;; markdown
    markdown-mode
+   haml-mode
    ))
 
 
