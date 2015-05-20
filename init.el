@@ -39,7 +39,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (color-theme-sanityinc-tomorrow yasnippet-bundle undo-tree smartparens robe rbenv rainbow-delimiters markdown-mode helm erlang enh-ruby-mode dash-at-point company clojure-snippets cider))))
+    (haml-mode markdown-mode yasnippet company org-magit org-plus-contrib color-theme-sanityinc-tomorrow magit dash-at-point undo-tree git-gutter helm-projectile helm-ag helm erlang robe enh-ruby-mode rbenv cider rainbow-delimiters smartparens))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
