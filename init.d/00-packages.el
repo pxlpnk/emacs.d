@@ -31,6 +31,7 @@
    magit
    ;; Color themes
    color-theme-sanityinc-tomorrow
+   material-theme
    ;; ORG
    org
    org-plus-contrib
@@ -44,6 +45,9 @@
    ;; markdown
    markdown-mode
    haml-mode
+   ;; TeX
+   auctex
+   expand-region
    ))
 
 

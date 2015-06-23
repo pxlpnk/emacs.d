@@ -1,4 +1,5 @@
 (require 'org-crypt)
+(require 'org-mu4e)
 (org-crypt-use-before-save-magic)
 (setq org-tags-exclude-from-inheritance (quote ("crypt")))
 
@@ -60,6 +61,3 @@
 
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
 (setq org-mobile-inbox-for-pull (concat org-directory "/index.org"))
-
-
-

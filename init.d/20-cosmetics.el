@@ -1,6 +1,7 @@
 (require 'color-theme-sanityinc-tomorrow)
 
-(load-theme 'sanityinc-tomorrow-night t)
+(load-theme 'material t)
+;(load-theme 'sanityinc-tomorrow-night t)
 (setq-default show-trailing-whitespace nil)
 
 (require 'ansi-color)
@@ -16,7 +17,6 @@
 (column-number-mode t)                   ;; show column numbers
 (size-indication-mode t)                 ;; show file size (emacs 22+)
 (tool-bar-mode -1)                       ;; turn-off toolbar
-
 
 (set-face-attribute 'default nil :height 100)
 (setq visible-bell 'top-bottom)

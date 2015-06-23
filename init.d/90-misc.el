@@ -5,13 +5,16 @@
 
 (smartparens-global-mode t)
 (show-smartparens-global-mode t)
+(smartparens-global-strict-mode)
 (require 'smartparens-config)
 (require 'smartparens-ruby)
 
-(define-key smartparens-mode-map (kbd "C-<right>") 'sp-forward-slurp-sexp)
-(define-key smartparens-mode-map (kbd "C-<left>") 'sp-forward-barf-sexp)
-(define-key smartparens-mode-map (kbd "C-M-<up>") 'sp-backward-slurp-sexp)
-(define-key smartparens-mode-map (kbd "C-M-<down>") 'sp-backward-barf-sexp)
+
+;; (sp-use-smartparens-bindings)
+;; (define-key smartparens-mode-map (kbd "C-<right>") 'sp-forward-slurp-sexp)
+;; (define-key smartparens-mode-map (kbd "C-<left>") 'sp-forward-barf-sexp)
+;; (define-key smartparens-mode-map (kbd "C-M-<up>") 'sp-backward-slurp-sexp)
+;; (define-key smartparens-mode-map (kbd "C-M-<down>") 'sp-backward-barf-sexp)
 
 
 (add-hook 'after-init-hook 'smartparens-strict-mode)

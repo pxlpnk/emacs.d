@@ -57,4 +57,18 @@
 (define-key global-map (kbd "H-a") 'org-agenda)
 
 
-;; Cider
+(defun at-duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank))
+
+(global-set-key (kbd "C-d") 'duplicate-line)
+
+
+;; expand-region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
