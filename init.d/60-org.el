@@ -7,7 +7,7 @@
 
 (setq auto-save-default nil)
 (setq org-startup-indented t)
-(setq org-todo-keywords '((sequence "TODO(t)" "WIP(w)" "DELEGATED(X)" "DONE(d)" )
+(setq org-todo-keywords '((sequence "TODO(t)" "WIP(w)" "DONE(d)" "DELEGATED(X)" )
                           (sequence "REPORT(r)" "BUG(b)" "WONTFIX(n)" "FIXED(f)")))
 
 (defun gtd-contentful ()
