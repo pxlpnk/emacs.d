@@ -41,10 +41,10 @@
              (setq yas-extra-modes 'rspec-mode)))
 
 ;; Taken from @plexus: https://github.com/plexus/.emacs.d/blob/master/init.d/ruby.el
-(defun make-temp-ruby-buffer-name ()
+(defun at/make-temp-ruby-buffer-name ()
   (let* (
-         ;; (dir (concat (getenv "HOME") "/projects/ruby-tmp"))
-         (dir (concat "" "/tmp/ruby-tmp/"))
+         (dir (concat (getenv "HOME") "/tmp/ruby-tmp"))
+         ;; (dir (concat "" "/tmp/ruby-tmp/"))
          (last-buffer (car (last (directory-files dir nil "^[0-9]+\.rb")))))
     (or (file-directory-p dir) (mkdir dir))
     (format "%s/%05d.rb"
@@ -54,13 +54,8 @@
                           (if last-buffer last-buffer "00000.rb")
                           "\\.")))))))
 
-(defun temp-ruby-buffer ()
+(defun at/temp-ruby-buffer ()
   (interactive)
-  ;; (interactive
-  ;;  (let ((string (read-string "Foo: " nil 'my-history)))
-     ;; (list (region-beginning) (region-end) string)))
   (let ((buffer (make-temp-ruby-buffer-name)))
     (write-region "" nil buffer)
     (find-file buffer)))
-
-;; (temp-ruby-buffer)

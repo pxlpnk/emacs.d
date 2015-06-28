@@ -28,14 +28,14 @@
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 (global-set-key (kbd "C-x <left>") 'windmove-left)
 
-(defun move-line-up ()
+(defun at/move-line-up ()
   "Move up the current line."
   (interactive)
   (transpose-lines 1)
   (forward-line -2)
   (indent-according-to-mode))
 
-(defun move-line-down ()
+(defun at/move-line-down ()
   "Move down the current line."
   (interactive)
   (forward-line 1)
@@ -43,8 +43,8 @@
   (forward-line -1)
   (indent-according-to-mode))
 
-(global-set-key [(control shift up)]  'move-line-up)
-(global-set-key [(control shift down)]  'move-line-down)
+(global-set-key [(control shift up)]  'at/move-line-up)
+(global-set-key [(control shift down)]  'at/move-line-down)
 
 ;; Opens the dash documentation
 (global-set-key "\C-cd" 'dash-at-point)
@@ -57,7 +57,7 @@
 (define-key global-map (kbd "H-a") 'org-agenda)
 
 
-(defun at-duplicate-line()
+(defun at/duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
   (kill-line)
@@ -66,7 +66,7 @@
   (next-line 1)
   (yank))
 
-(global-set-key (kbd "C-d") 'at-duplicate-line)
+(global-set-key (kbd "C-d") 'at/duplicate-line)
 
 
 ;; expand-region

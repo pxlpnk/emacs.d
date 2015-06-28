@@ -34,7 +34,7 @@
 
 ;; http://nileshk.com/2009/06/13/prompt-before-closing-emacs.html
 
-(defun ask-before-closing ()
+(defun at/ask-before-closing ()
   "Ask whether or not to close, and then close if y was pressed"
   (interactive)
   (if (y-or-n-p (format "Are you sure you want to exit Emacs? "))
@@ -44,7 +44,7 @@
     (message "Canceled exit")))
 
 (when window-system
-  (global-set-key (kbd "C-x C-c") 'ask-before-closing))
+  (global-set-key (kbd "C-x C-c") 'at/ask-before-closing))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -57,7 +57,7 @@
 
 
 ;; http://emacswiki.org/emacs/RecreateScratchBuffer
-(defun create-scratch-buffer nil
+(defun at/create-scratch-buffer nil
   "create a scratch buffer"
   (interactive)
   (switch-to-buffer (get-buffer-create "*scratch*"))

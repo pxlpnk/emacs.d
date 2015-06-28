@@ -10,19 +10,19 @@
 (setq org-todo-keywords '((sequence "TODO(t)" "WIP(w)" "DONE(d)" "DELEGATED(X)" )
                           (sequence "REPORT(r)" "BUG(b)" "WONTFIX(n)" "FIXED(f)")))
 
-(defun gtd-contentful ()
+(defun at/gtd-contentful ()
   (interactive)
   (find-file "~/Dropbox/org/contentful/contentful_gtd.org"))
 
 
-(defun gtd ()
+(defun at/gtd ()
   (interactive)
   (find-file "~/Dropbox/org/p/gtd.org"))
 
 (global-set-key (kbd "C-$") 'org-archive-subtree)
-(global-set-key (kbd "C-c g") 'gtd-contentful)
+(global-set-key (kbd "C-c g") 'at/gtd-contentful)
 (global-set-key (kbd "H-g") 'gtd)
-(global-set-key (kbd "C-c b") 'org-iswitchb)
+(global-set-key (kbd "C-c b") 'at/org-iswitchb)
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Dropbox/org/p/refile.org" "Tasks")
@@ -48,7 +48,7 @@
 (setq org-agenda-window-setup 'current-window)
 
 ;; Thanks to @plexus for helping me with this piece of code
-(defun insert-org-link ()
+(defun at/insert-org-link ()
   (interactive)
   (insert
    (let* (
@@ -57,7 +57,7 @@
      (concat "[[" url "][\#"id"]]")) ))
 
 
-(global-set-key (kbd "H-i") 'insert-org-link)
+(global-set-key (kbd "H-i") 'at/insert-org-link)
 
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
 (setq org-mobile-inbox-for-pull (concat org-directory "/index.org"))

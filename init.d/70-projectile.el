@@ -5,7 +5,7 @@
 (global-set-key (kbd "M-p") 'helm-projectile-find-file)
 (global-set-key (kbd "M-b") 'helm-projectile-switch-to-buffer)
 (global-set-key (kbd "M-b") 'helm-projectile-switch-to-buffer)
-(global-set-key (kbd "H-G") 'helm-projectile-ag)
+(global-set-key (kbd "H-G") 'at/helm-projectile-ag)
 
 (require 'projectile)
 (projectile-global-mode)

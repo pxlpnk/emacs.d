@@ -6,6 +6,6 @@
       helm-ff-file-name-history-use-recentf t)
 
 (require 'helm-ag)
-(defun helm-projectile-ag ()
+(defun at/helm-projectile-ag ()
   (interactive)
   (helm-do-ag (projectile-project-root)))

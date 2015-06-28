@@ -43,9 +43,18 @@
 (setq mu4e-headers-skip-duplicates t)
 (setq message-kill-buffer-on-exit t)
 ;; (setq  mu4e-html2text-command "w3m -T text/html"
-(setq  mu4e-html2text-command "w3m -dump -cols 80 -T text/html"
-       mu4e-update-interval 1800
-       mu4e-headers-auto-update t)
+(setq mu4e-html2text-command 'mu4e-shr2text
+      ;; mu4e-html2text-command "w3m -dump -cols 80 -T text/html"
+      mu4e-update-interval 1800
+      mu4e-headers-auto-update t)
+
+(add-hook 'mu4e-view-mode-hook
+  (lambda()
+     ;; try to emulate some of the eww key-bindings
+    (local-set-key (kbd "<tab>") 'shr-next-link)
+    (local-set-key (kbd "<backtab>") 'shr-previous-link)))
+
+
 
 (setq message-signature-file "~/.emacs.d/.signature")
 
