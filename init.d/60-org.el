@@ -10,6 +10,11 @@
 (setq org-todo-keywords '((sequence "TODO(t)" "WIP(w)" "DONE(d)" "DELEGATED(X)" )
                           (sequence "REPORT(r)" "BUG(b)" "WONTFIX(n)" "FIXED(f)")))
 
+(setq org-todo-keyword-faces
+      '(
+        ("DONE" . (:foreground "green" :background :none))
+        ("TODO" . (:foreground "red" :background :none))))
+
 (defun at/gtd-contentful ()
   (interactive)
   (find-file "~/Dropbox/org/contentful/contentful_gtd.org"))
@@ -21,7 +26,7 @@
 
 (global-set-key (kbd "C-$") 'org-archive-subtree)
 (global-set-key (kbd "C-c g") 'at/gtd-contentful)
-(global-set-key (kbd "H-g") 'gtd)
+(global-set-key (kbd "H-g") 'at/gtd)
 (global-set-key (kbd "C-c b") 'at/org-iswitchb)
 
 (setq org-capture-templates
