@@ -18,7 +18,7 @@
 (size-indication-mode t)                 ;; show file size (emacs 22+)
 (tool-bar-mode -1)                       ;; turn-off toolbar
 
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 120)
 (setq visible-bell 'top-bottom)
 (scroll-bar-mode -1)
 
@@ -26,6 +26,9 @@
 
 (custom-set-faces
  '(font-lock-comment-face ((t (:height 0.8)))))
+
+
+(global-hl-line-mode t)
 
 (require 'git-gutter)
 (global-git-gutter-mode +1)
