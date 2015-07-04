@@ -21,14 +21,14 @@
 ;; https://github.com/dgutov/robe/issues/36#issuecomment-74448398
 (setq robe-turn-on-eldoc nil)
 
-(defun at-turn-on-robe ()
+(defun at/turn-on-robe ()
   (interactive)
   (add-hook 'enh-ruby-mode-hook 'robe-mode)
   (robe-mode 1))
 
 (at-turn-on-robe)
 
-(defun at-turn-off-robe ()
+(defun at/turn-off-robe ()
   (interactive)
   (remove-hook 'enh-ruby-mode-hook 'robe-mode)
   (robe-mode 0))
@@ -56,6 +56,6 @@
 
 (defun at/temp-ruby-buffer ()
   (interactive)
-  (let ((buffer (make-temp-ruby-buffer-name)))
+  (let ((buffer (at/make-temp-ruby-buffer-name)))
     (write-region "" nil buffer)
     (find-file buffer)))
