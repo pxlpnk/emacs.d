@@ -11,16 +11,13 @@
 
 
 ;; (sp-use-smartparens-bindings)
-;; (define-key smartparens-mode-map (kbd "C-<right>") 'sp-forward-slurp-sexp)
+(define-key smartparens-mode-map (kbd "M-<right>") 'sp-forward-slurp-sexp)
+(define-key smartparens-mode-map (kbd "M-<left>") 'sp-backward-barf-sexp)
 ;; (define-key smartparens-mode-map (kbd "C-<left>") 'sp-forward-barf-sexp)
 ;; (define-key smartparens-mode-map (kbd "C-M-<up>") 'sp-backward-slurp-sexp)
-;; (define-key smartparens-mode-map (kbd "C-M-<down>") 'sp-backward-barf-sexp)
-
 
 (add-hook 'after-init-hook 'smartparens-strict-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
-
 
 
 (require 'undo-tree)
