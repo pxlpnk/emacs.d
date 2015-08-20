@@ -26,7 +26,7 @@
   (add-hook 'enh-ruby-mode-hook 'robe-mode)
   (robe-mode 1))
 
-(at-turn-on-robe)
+(at/turn-on-robe)
 
 (defun at/turn-off-robe ()
   (interactive)

@@ -3,32 +3,32 @@
 
 
 ;; Directories and file names
-(setq at-emacs-init-file
+(setq at/emacs-init-file
       (or load-file-name buffer-file-name))
-(setq at-emacs-config-dir
-      (file-name-directory at-emacs-init-file))
-(setq user-emacs-directory at-emacs-config-dir)
-(setq at-elisp-dir
-      (expand-file-name "elisp" at-emacs-config-dir))
-(setq at-elisp-external-dir
-      (expand-file-name "external" at-elisp-dir))
-(setq at-themes-dir
-      (expand-file-name "themes" at-elisp-dir))
-(setq at-init-dir
-      (expand-file-name "init.d/" at-emacs-config-dir))
+(setq at/emacs-config-dir
+      (file-name-directory at/emacs-init-file))
+(setq user-emacs-directory at/emacs-config-dir)
+(setq at/elisp-dir
+      (expand-file-name "elisp" at/emacs-config-dir))
+(setq at/elisp-external-dir
+      (expand-file-name "external" at/elisp-dir))
+(setq at/themes-dir
+      (expand-file-name "themes" at/elisp-dir))
+(setq at/init-dir
+      (expand-file-name "init.d/" at/emacs-config-dir))
 
 ;; TODO: add possibility to exclude files when loading from init.d
 
 ;; Load all elisp files in ./init.d
-(if (file-exists-p at-init-dir)
-    (dolist (file (directory-files at-init-dir t "\\.el$"))
+(if (file-exists-p at/init-dir)
+    (dolist (file (directory-files at/init-dir t "\\.el$"))
       (load file)))
 
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 ;; Write backup files to own directory
 (setq backup-directory-alist
-      `(("." . ,(expand-file-name (concat at-emacs-config-dir "bak")))))
+      `(("." . ,(expand-file-name (concat at/emacs-config-dir "bak")))))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
