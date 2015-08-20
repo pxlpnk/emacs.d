@@ -13,6 +13,7 @@
    smartparens
    rainbow-delimiters
    cider
+   clj-refactor
    ;; Ruby
    rbenv
    enh-ruby-mode
