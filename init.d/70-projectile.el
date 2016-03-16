@@ -2,10 +2,9 @@
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
 
-(global-set-key (kbd "M-p") 'helm-projectile-find-file)
-(global-set-key (kbd "M-b") 'helm-projectile-switch-to-buffer)
-(global-set-key (kbd "M-b") 'helm-projectile-switch-to-buffer)
-(global-set-key (kbd "H-G") 'at/helm-projectile-ag)
+(global-set-key (kbd "H-p") 'helm-projectile-find-file)
+(global-set-key (kbd "H-b") 'helm-projectile-switch-to-buffer)
+(global-set-key (kbd "H-f") 'at/helm-projectile-ag)
 
 (require 'projectile)
 (projectile-global-mode)

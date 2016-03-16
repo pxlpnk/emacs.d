@@ -8,11 +8,12 @@
 (smartparens-global-strict-mode)
 (require 'smartparens-config)
 (require 'smartparens-ruby)
+(require 'smartparens-latex)
 
 
 ;; (sp-use-smartparens-bindings)
-(define-key smartparens-mode-map (kbd "M-<right>") 'sp-forward-slurp-sexp)
-(define-key smartparens-mode-map (kbd "M-<left>") 'sp-backward-barf-sexp)
+;; (define-key smartparens-mode-map (kbd "M-<right>") 'sp-forward-slurp-sexp)
+;; (define-key smartparens-mode-map (kbd "M-<left>") 'sp-backward-barf-sexp)
 ;; (define-key smartparens-mode-map (kbd "C-<left>") 'sp-forward-barf-sexp)
 ;; (define-key smartparens-mode-map (kbd "C-M-<up>") 'sp-backward-slurp-sexp)
 

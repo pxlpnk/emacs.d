@@ -1,4 +1,11 @@
 ;; start the server as first
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (server-mode)
 
 
@@ -37,12 +44,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (haml-mode markdown-mode yasnippet company org-magit org-plus-contrib color-theme-sanityinc-tomorrow magit dash-at-point undo-tree git-gutter helm-projectile helm-ag helm erlang robe enh-ruby-mode rbenv cider rainbow-delimiters smartparens))))
+    (js2-mode php-mode osx-dictionary beacon general-close csv-mode clojure-cheatsheet writeroom-mode yaml-mode vagrant-tramp undo-tree rbenv rainbow-delimiters org-magit haml-mode exercism erlang enh-ruby-mode dash-at-point company command-log-mode color-theme-sanityinc-tomorrow))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(font-lock-comment-face ((t (:height 0.8)))))
+(put 'upcase-region 'disabled nil)

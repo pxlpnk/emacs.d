@@ -13,7 +13,7 @@
 ;; Maggit
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "M-;") 'comment-line)
-(global-set-key (kbd "C-c e") 'mu4e)
+
 (global-set-key (kbd "H-e") 'mu4e)
 
 (windmove-default-keybindings 'hyper)
@@ -27,6 +27,11 @@
 (global-set-key (kbd "C-x <down>") 'windmove-down)
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 (global-set-key (kbd "C-x <left>") 'windmove-left)
+
+;; (global-unset-key (kbd "<left>"))
+;; (global-unset-key (kbd "<right>"))
+;; (global-unset-key (kbd "<up>"))
+;; (global-unset-key (kbd "<down>"))
 
 (defun at/move-line-up ()
   "Move up the current line."
@@ -67,7 +72,6 @@
   (yank))
 
 (global-set-key (kbd "C-d") 'at/duplicate-line)
-
 
 ;; expand-region
 (require 'expand-region)

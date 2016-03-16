@@ -26,7 +26,7 @@
          ("/anti/Github.*"             . ?g)
          ))
 
-(setq mu4e-get-mail-command "offlineimap"
+(setq mu4e-get-mail-command "mbsync -a"
       mu4e-update-interval 900) ;; update every 15 minutes
 
 ;; try to encrypt messages automatically

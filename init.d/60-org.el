@@ -19,7 +19,6 @@
   (interactive)
   (find-file "~/Dropbox/org/contentful/contentful_gtd.org"))
 
-
 (defun at/gtd ()
   (interactive)
   (find-file "~/Dropbox/org/p/gtd.org"))
@@ -30,12 +29,12 @@
 (global-set-key (kbd "C-c b") 'at/org-iswitchb)
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/Dropbox/org/p/refile.org" "Tasks")
-         "* TODO %? :refile:TODO:\n  %i\n  %a")
+      '(("t" "Todo" entry (file+headline "~/Dropbox/org/inbox.org" "Tasks")
+         "* TODO %? :TODO:\n  %i\n  %a")
         ("j" "Journal" entry (file+datetree "~/Dropbox/org/p/journal.org")
          "* %U: %? %i\n")
-        ("n" "Note" entry (file+headline "~/Dropbox/org/p/refile.org" "Notes")
-         "* %? :refile:NOTE:\n%U\n%a\n")
+        ("n" "Note" entry (file+headline "~/Dropbox/org/inbox.org" "Notes")
+         "* %? :NOTE:\n%U\n%a\n")
         ("b" "Bookmark" entry (file "~/Dropbox/org/p/bookmark.org" "Bookmarks")
          "* %? :bookmark:\n%U\n")
         ))
@@ -45,7 +44,8 @@
 (setq org-log-done t)
 
 (setq org-agenda-files (list "~/Dropbox/org/contentful/"
-                             "~/Dropbox/org/p/"))
+                             "~/Dropbox/org/p/"
+                             "~/Dropbox/org/inbox.org"))
 (setq org-startup-truncated t)
 
 (setq org-return-follows-link  t)
@@ -66,3 +66,6 @@
 
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
 (setq org-mobile-inbox-for-pull (concat org-directory "/index.org"))
+
+(setq org-refile-targets (quote ((nil :maxlevel . 9)
+                                 (org-agenda-files :maxlevel . 9))))
