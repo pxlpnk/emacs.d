@@ -26,8 +26,9 @@
          ("/anti/Github.*"             . ?g)
          ))
 
-(setq mu4e-get-mail-command "mbsync -a"
-      mu4e-update-interval 900) ;; update every 15 minutes
+;; update every 15 minutes
+(setq mu4e-get-mail-command "mbsync -a -q"
+      mu4e-update-interval 900)
 
 ;; try to encrypt messages automatically
 ;; (setq mu4e-decryption-policy t)

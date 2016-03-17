@@ -39,13 +39,20 @@
          "* %? :bookmark:\n%U\n")
         ))
 
-(setq org-directory "~/Dropbox/org/p/")
+(setq org-directory "~/Dropbox/org/")
 
 (setq org-log-done t)
 
-(setq org-agenda-files (list "~/Dropbox/org/contentful/"
-                             "~/Dropbox/org/p/"
-                             "~/Dropbox/org/inbox.org"))
+(setq org-agenda-files (list "~/Dropbox/org/inbox.org"
+                             "~/Dropbox/org/contentful/"
+                             "~/Dropbox/org/p/"))
+
+(setq org-agenda-custom-commands
+      '(("r" tags "+refile")
+        ("n" "Agenda and all TODOs" ((agenda "") (todo "TODO")))
+        ("w" "Agenda and all WAITINGSs" ((agenda "") (todo "WAITING")))
+        ))
+
 (setq org-startup-truncated t)
 
 (setq org-return-follows-link  t)
