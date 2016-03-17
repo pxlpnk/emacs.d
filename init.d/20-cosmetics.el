@@ -36,5 +36,3 @@
 
 (require 'git-gutter)
 (global-git-gutter-mode +1)
-
-(setq initial-buffer-choice "~/Dropbox/org/p/gtd.org")
