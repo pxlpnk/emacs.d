@@ -23,3 +23,15 @@
 
 (require 'undo-tree)
 (global-undo-tree-mode)
+
+;; https://tickething.com/entity/8656 -> [:ticket: #8656](https://tickething.com/entity/8656)
+;; Will take the last part of the url as the ticket id and make a nice markdown link
+;; The link will be pasted at the current cursor point and will copy it to the clipboard
+(defun at/md-ticket-link ()
+  (interactive)
+  (insert
+   (let* (
+          (url (x-get-clipboard))
+          (id (replace-regexp-in-string ".*/" "" url))
+          (ticket-string (concat "[:ticket: #" id "](" url ")")))
+     (kill-new ticket-string))))
