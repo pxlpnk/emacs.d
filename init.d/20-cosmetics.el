@@ -21,7 +21,9 @@
 (tool-bar-mode -1)                       ;; turn-off toolbar
 
 (set-face-attribute 'default nil :height 120)
-(setq visible-bell 'top-bottom)
+(setq visible-bell t)
+(setq ns-visual-bell-size 2)
+
 (scroll-bar-mode -1)
 
 ;; comments should have smaller font
@@ -37,4 +39,6 @@
 (require 'git-gutter)
 (global-git-gutter-mode +1)
 
-(setq initial-buffer-choice "~/Dropbox/org/p/gtd.org")
+;; (setq initial-buffer-choice "~/Dropbox/org/p/gtd.org")
+;; (setq initial-buffer-choice nil)
+(setq inhibit-startup-screen t)
