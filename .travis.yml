@@ -13,4 +13,4 @@ env:
   matrix:
     - EMACS=emacs24
 
-script: travis.sh
+script: ./travis.sh
