@@ -1,0 +1,16 @@
+language: generic
+
+sudo: false
+
+addons:
+  apt:
+    sources:
+    - cassou-emacs
+    packages:
+    - emacs24
+
+env:
+  matrix:
+    - EMACS=emacs24
+
+script: emacs --load "./init.el" --script
