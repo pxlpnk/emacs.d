@@ -2,15 +2,21 @@ language: generic
 
 sudo: false
 
-addons:
-  apt:
-    sources:
-    - ubuntu-elisp
-    packages:
-    - emacs-snapshot
-
 env:
   matrix:
-    - EMACS=emacs24
+# Run unit tests against oldest supported stable, latest stable, and trunk
+    - EMACS_VERSION=24.3
+    - EMACS_VERSION=24.5
+    - EMACS_VERSION=snapshot COMPILEFLAGS='error-on-warn'
+before_install:
+  - export PATH="$HOME/bin:$PATH"
+  - wget 'https://raw.githubusercontent.com/flycheck/emacs-travis/master/emacs-travis.mk'
+  - if [[ -n $EMACS_VERSION ]]; then make -f emacs-travis.mk install_emacs; fi
+  - if [[ -n $EMACS_VERSION ]]; then emacs --version; fi
+install:
+  - if [[ -n $EMACS_VERSION ]]; then make deps; fi
+script:
+  - if [[ -n $EMACS_VERSION ]]; then make compile; fi
+  - if [[ -n $EMACS_VERSION ]]; then make test; fi
 
 script: ./travis.sh
