@@ -13,4 +13,4 @@ env:
   matrix:
     - EMACS=emacs24
 
-script: emacs --load "./init.el" --script
+script: emacs --load "./init.el" --script test.el

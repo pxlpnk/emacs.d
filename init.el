@@ -47,7 +47,7 @@
  '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (js2-mode php-mode osx-dictionary beacon general-close csv-mode clojure-cheatsheet writeroom-mode yaml-mode vagrant-tramp undo-tree rbenv rainbow-delimiters org-magit haml-mode exercism erlang enh-ruby-mode dash-at-point company command-log-mode color-theme-sanityinc-tomorrow))))
+    (pinboard-api which-key helm-swoop request js2-mode php-mode osx-dictionary beacon general-close csv-mode clojure-cheatsheet writeroom-mode yaml-mode vagrant-tramp undo-tree rbenv rainbow-delimiters org-magit haml-mode exercism erlang enh-ruby-mode dash-at-point company command-log-mode color-theme-sanityinc-tomorrow))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
