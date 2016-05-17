@@ -5,9 +5,9 @@ sudo: false
 addons:
   apt:
     sources:
-    - cassou-emacs
+    - ubuntu-elisp
     packages:
-    - emacs24
+    - emacs-snapshot
 
 env:
   matrix:
