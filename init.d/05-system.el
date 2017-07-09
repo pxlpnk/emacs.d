@@ -6,13 +6,17 @@
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 
+(set-exec-path-from-shell-PATH)
+
 (when (or (eq window-system 'ns) (eq window-system 'x))
   (set-exec-path-from-shell-PATH))
 
-(when (eq window-system 'x)
-  (setq browse-url-generic-program (executable-find "google-chrome")
-        browse-url-browser-function 'browse-url-generic))
+;; (when (eq window-system 'x)
+;;   (setq browse-url-generic-program (executable-find "google-chrome")
+;;         browse-url-browser-function 'browse-url-generic))
 
+;; (setq browse-url-browser-function 'eww-browse-url)
+;; (setq browse-url-browser-function 'browse-url-browser-function)
 (setq dotfiles-dir (expand-file-name "~/.emacs.d/"))
 
 (setq locale-coding-system 'utf-8)

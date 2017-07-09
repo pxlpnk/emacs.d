@@ -1,6 +1,6 @@
-(require 'color-theme-sanityinc-tomorrow)
+;; (require 'color-theme-sanityinc-tomorrow)
 
-(load-theme 'material t)
+(load-theme 'material-light t)
 ;(load-theme 'sanityinc-tomorrow-night t)
 (setq-default show-trailing-whitespace nil)
 
