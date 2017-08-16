@@ -1,4 +1,4 @@
-(global-set-key (kbd "M-x") 'helm-M-x)
+;; (global-set-key (kbd "M-x") 'helm-M-x)
 
 (setq mac-option-key-is-meta nil)
 (setq ns-function-modifier 'hyper)

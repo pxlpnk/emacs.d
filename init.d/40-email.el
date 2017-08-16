@@ -11,7 +11,7 @@
 
 ;; Notmuch Configuration
 (setq notmuch-crypto-process-mime t)
-(setq notmuch-search-oldest-first nil)
+(setq notmuch-search-oldest-first t)
 
 ;; Sending mail Configuration
 (setq send-mail-function 'smtpmail-send-it)

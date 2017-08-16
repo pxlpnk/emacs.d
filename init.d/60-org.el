@@ -15,17 +15,21 @@
 (setq org-log-done 'time)
 
 (setq org-crypt-key "49C0DBF3")
+(setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
+(setq org-clock-into-drawer t)
+(setq org-log-into-drawer t)
 
 (setq auto-save-default nil)
 (setq org-startup-indented t)
-(setq org-todo-keywords '((sequence "TODO(t)" "WIP(w)" "|" "DONE(d)" "DELEGATED(X)" "WONT" "ONHOLD")))
+(setq org-todo-keywords '((sequence "TODO(t!)" "WIP(w!)" "|" "DONE(d!)" "DELEGATED(X!)" "WONT(n!)" "ONHOLD(h!)")))
 
 (setq org-todo-keyword-faces
       '(
         ("DONE" . (:foreground "green" :background :none))
         ("WIP" . (:foreground "orange" :background :none))
         ("ONHOLD" . (:foreground "blue" :background :none))
-        ("TODO" . (:foreground "red" :background :none))))
+        ("TODO" . (:foreground "red" :background :none)))
+      )
 
 (defun at/gtd-contentful ()
   (interactive)
@@ -49,6 +53,8 @@
          "* %? :NOTE:\n%U\n")
         ("b" "Bookmark" entry (file "~/Dropbox/org/p/bookmark.org" "Bookmarks")
          "* %? :bookmark:\n%U\n")
+        ("x" "Tickler" entry (file+headline "~/Dropbox/org/tickler.org" "Tickler")
+         "* TODO %? :todo:scheduled:\n%U\n")
         ))
 
 (setq org-directory "~/Dropbox/org/")
@@ -56,12 +62,15 @@
 (setq org-log-done t)
 
 (setq org-agenda-files (list "~/Dropbox/org/inbox.org"
+                             "~/Dropbox/org/tickler.org"
                              "~/Dropbox/org/contentful/"
                              "~/Dropbox/org/p/"))
 
 (setq org-refile-targets (quote (("~/Dropbox/org/inbox.org" :maxlevel . 3)
                                  ("~/Dropbox/org/contentful/contentful_gtd.org" :maxlevel . 3)
                                  ("~/Dropbox/org/contentful/backlog.org" :maxlevel . 3)
+                                 ("~/Dropbox/org/contentful/notes.org" :maxlevel . 3)
+                                 ("~/Dropbox/org/tickler.org" :maxlevel . 1)
                                  ("~/Dropbox/org/p/gtd.org" :maxlevel . 3 ))))
 
 
@@ -69,10 +78,11 @@
       '(("r" tags "+refile")
         ("n" "Agenda and all TODOs" ((agenda "") (todo "TODO")))
         ("w" "Agenda and all WAITINGSs" ((agenda "") (todo "WAITING")))
-        ("c" "Agenda for contentful" (
-                                      (agenda "" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
+        ("W" "Weekly review"  ((agenda "" (org-agenda-ndays 7))))
+        ("c" "Agenda for contentful" ((agenda "" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org" "~/Dropbox/org/tickler.org"))))
                                       (todo "WIP" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
                                       (todo "TODO" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
+                                      (todo "ONHOLD" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
                                       ))))
 
 (setq org-startup-truncated t)
@@ -90,16 +100,6 @@
           (id (replace-regexp-in-string ".*/" "" url)))
      (concat "[[" url "][\#"id"]]")) ))
 
-
 (global-set-key (kbd "H-i") 'at/insert-org-link)
-
-(setq org-mobile-directory "~/Dropbox/org-mobile")
-(setq org-mobile-inbox-for-pull (concat org-directory "/index.org"))
-
-
-
-;; (setq org-refile-targets '(("~/gtd/gtd.org" :maxlevel . 3)
-;;                            ("~/gtd/someday.org" :level . 1)
-;;                            ("~/gtd/tickler.org" :maxlevel . 2)))
 
 (add-hook 'org-mode-hook 'turn-on-flyspell)

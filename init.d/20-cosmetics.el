@@ -1,7 +1,7 @@
 ;; (require 'color-theme-sanityinc-tomorrow)
 
-(load-theme 'material-light t)
-;(load-theme 'sanityinc-tomorrow-night t)
+;; (load-theme 'material-light t)
+;; (load-theme 'sanityinc-tomorrow-night t)
 (setq-default show-trailing-whitespace nil)
 
 (require 'ansi-color)
@@ -36,9 +36,4 @@
 
 (global-hl-line-mode t)
 
-(require 'git-gutter)
-(global-git-gutter-mode +1)
-
-;; (setq initial-buffer-choice "~/Dropbox/org/p/gtd.org")
-;; (setq initial-buffer-choice nil)
 (setq inhibit-startup-screen t)

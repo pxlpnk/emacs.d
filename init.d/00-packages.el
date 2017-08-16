@@ -17,9 +17,10 @@
    ;; Erlang
    erlang
    ;; Navigation
-   helm
-   helm-ag
-   helm-projectile
+  ;; helm
+  ;; helm-ag
+  ;; helm-projectile
+  ;; helm-org-rifle
    projectile
    git-gutter
    undo-tree
@@ -29,10 +30,11 @@
    ;; Color themes
    color-theme-sanityinc-tomorrow
    material-theme
+   base16-theme
    ;; ORG
    org
    org-plus-contrib
-   org-magit
+
    ;; auto complete
    company
    ;; ya-snippets
@@ -40,8 +42,7 @@
    ;;   yasnippet-bundle
    ;;   clojure-snippets
    ;; markdown
-   markdown-mode
-   haml-mode
+   ;; haml-mode
    ;; TeX
    auctex
    ;; misc
