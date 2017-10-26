@@ -21,7 +21,7 @@
 
 (setq auto-save-default nil)
 (setq org-startup-indented t)
-(setq org-todo-keywords '((sequence "TODO(t!)" "WIP(w!)" "|" "DONE(d!)" "DELEGATED(X!)" "WONT(n!)" "ONHOLD(h!)")))
+(setq org-todo-keywords '((sequence "TODO(t!)" "WIP(w!)" "|" "DONE(d!)" "DELEGATED(x!)" "WAITING(a@)" "WONT(n!)" "ONHOLD(h!)")))
 
 (setq org-todo-keyword-faces
       '(
@@ -80,6 +80,7 @@
         ("w" "Agenda and all WAITINGSs" ((agenda "") (todo "WAITING")))
         ("W" "Weekly review"  ((agenda "" (org-agenda-ndays 7))))
         ("c" "Agenda for contentful" ((agenda "" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org" "~/Dropbox/org/tickler.org"))))
+                                      (tags-todo "sprint" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
                                       (todo "WIP" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
                                       (todo "TODO" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
                                       (todo "ONHOLD" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
