@@ -1,5 +1,4 @@
 (require 'org-crypt)
-(require 'org-mu4e)
 (require 'org-habit)
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -11,10 +10,11 @@
 
 (org-crypt-use-before-save-magic)
 (setq org-tags-exclude-from-inheritance (quote ("crypt")))
+(setq org-crypt-key "49C0DBF3")
 
 (setq org-log-done 'time)
 
-(setq org-crypt-key "49C0DBF3")
+
 (setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
 (setq org-clock-into-drawer t)
 (setq org-log-into-drawer t)
@@ -47,8 +47,8 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Dropbox/org/inbox.org" "Tasks")
          "* TODO %? :TODO:\n  %i\n")
-        ("j" "Journal" entry (file+datetree "~/Dropbox/org/p/journal.org")
-         "* %U: %? %i\n")
+        ("j" "Journal" entry (file+datetree "~/Dropbox/org/p/journal.org.gpg")
+         "* %U: %? %i :journal:\n")
         ("n" "Note" entry (file+headline "~/Dropbox/org/inbox.org" "Notes")
          "* %? :NOTE:\n%U\n")
         ("b" "Bookmark" entry (file "~/Dropbox/org/p/bookmark.org" "Bookmarks")

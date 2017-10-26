@@ -1,7 +1,7 @@
 ;; (require 'color-theme-sanityinc-tomorrow)
 
 ;; (load-theme 'material-light t)
-;; (load-theme 'sanityinc-tomorrow-night t)
+(load-theme 'base16-material-darker t)
 (setq-default show-trailing-whitespace nil)
 
 (require 'ansi-color)

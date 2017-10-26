@@ -1,4 +1,4 @@
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
 (setq
@@ -17,10 +17,10 @@
    ;; Erlang
    erlang
    ;; Navigation
-  ;; helm
-  ;; helm-ag
+  helm
+  helm-ag
   ;; helm-projectile
-  ;; helm-org-rifle
+  helm-org-rifle
    projectile
    git-gutter
    undo-tree
