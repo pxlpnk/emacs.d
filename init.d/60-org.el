@@ -45,8 +45,10 @@
 (global-set-key (kbd "C-c b") 'at/org-iswitchb)
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/Dropbox/org/inbox.org" "Tasks")
-         "* TODO %? :TODO:\n  %i\n")
+      '(("p" "Private Todo" entry (file+headline "~/Dropbox/org/inbox.org" "Tasks")
+         "* TODO %? :TODO:@PRIVATE:\n  %i\n")
+        ("c" "Contentful Todo" entry (file+headline "~/Dropbox/org/inbox.org" "Tasks")
+         "* TODO %? :TODO:@CONTENTFUL:\n  %i\n")
         ("j" "Journal" entry (file+datetree "~/Dropbox/org/p/journal.org.gpg")
          "* %U: %? %i :journal:\n")
         ("n" "Note" entry (file+headline "~/Dropbox/org/inbox.org" "Notes")
@@ -71,14 +73,15 @@
                                  ("~/Dropbox/org/contentful/backlog.org" :maxlevel . 3)
                                  ("~/Dropbox/org/contentful/notes.org" :maxlevel . 3)
                                  ("~/Dropbox/org/tickler.org" :maxlevel . 1)
-                                 ("~/Dropbox/org/p/gtd.org" :maxlevel . 3 ))))
+                                 ("~/Dropbox/org/p/gtd.org" :maxlevel . 3 )
+                                 ("~/Dropbox/org/p/someday.org" :maxlevel . 3 )
+                                 )))
 
 
 (setq org-agenda-custom-commands
       '(("r" tags "+refile")
         ("n" "Agenda and all TODOs" ((agenda "") (todo "TODO")))
         ("w" "Agenda and all WAITINGSs" ((agenda "") (todo "WAITING")))
-        ("W" "Weekly review"  ((agenda "" (org-agenda-ndays 7))))
         ("p" "Private Agenda" ((agenda "" ((org-agenda-files '("~/Dropbox/org/p/gtd.org" "~/Dropbox/org/tickler.org"))))
                                       (todo "WIP" ((org-agenda-files '("~/Dropbox/org/p/gtd.org"))))
                                       (todo "TODO" ((org-agenda-files '("~/Dropbox/org/p/gtd.org"))))
