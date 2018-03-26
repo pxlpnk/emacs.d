@@ -31,8 +31,8 @@
 (custom-set-faces
  '(font-lock-comment-face ((t (:height 0.8)))))
 
-(when (eq system-type 'darwin)
-      (set-default-font "-*-Hack-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
+;;(when (eq system-type 'darwin)
+;;  (set-default-font "-*-Hack-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
 
 (global-hl-line-mode t)
 

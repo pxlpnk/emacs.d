@@ -35,12 +35,21 @@
   (interactive)
   (find-file "~/Dropbox/org/contentful/contentful_gtd.org"))
 
+(defun at/gtd-guardrails ()
+  (interactive)
+  (find-file "~/Dropbox/org/GuardRails/gr_gtd.org"))
+
+
 (defun at/gtd ()
   (interactive)
   (find-file "~/Dropbox/org/p/gtd.org"))
 
+
+
+
 (global-set-key (kbd "C-$") 'org-archive-subtree)
 (global-set-key (kbd "C-c g") 'at/gtd-contentful)
+(global-set-key (kbd "C-c r") 'at/gtd-guardrails)
 (global-set-key (kbd "H-g") 'at/gtd)
 (global-set-key (kbd "C-c b") 'at/org-iswitchb)
 
@@ -49,6 +58,8 @@
          "* TODO %? :TODO:@PRIVATE:\n  %i\n")
         ("c" "Contentful Todo" entry (file+headline "~/Dropbox/org/inbox.org" "Tasks")
          "* TODO %? :TODO:@CONTENTFUL:\n  %i\n")
+        ("g" "GuardRails Todo" entry (file+headline "~/Dropbox/org/inbox.org" "Tasks")
+         "* TODO %? :TODO:@GUARDRAILS:\n  %i\n")
         ("j" "Journal" entry (file+datetree "~/Dropbox/org/p/journal.org.gpg")
          "* %U: %? %i :journal:\n")
         ("n" "Note" entry (file+headline "~/Dropbox/org/inbox.org" "Notes")
@@ -66,10 +77,12 @@
 (setq org-agenda-files (list "~/Dropbox/org/inbox.org"
                              "~/Dropbox/org/tickler.org"
                              "~/Dropbox/org/contentful/"
+                             "~/Dropbox/org/GuardRails/"
                              "~/Dropbox/org/p/"))
 
 (setq org-refile-targets (quote (("~/Dropbox/org/inbox.org" :maxlevel . 3)
                                  ("~/Dropbox/org/contentful/contentful_gtd.org" :maxlevel . 3)
+                                 ("~/Dropbox/org/GuardRails/gr_gtd.org" :maxlevel . 3)
                                  ("~/Dropbox/org/contentful/backlog.org" :maxlevel . 3)
                                  ("~/Dropbox/org/contentful/notes.org" :maxlevel . 3)
                                  ("~/Dropbox/org/tickler.org" :maxlevel . 1)
@@ -77,22 +90,26 @@
                                  ("~/Dropbox/org/p/someday.org" :maxlevel . 3 )
                                  )))
 
-
 (setq org-agenda-custom-commands
       '(("r" tags "+refile")
         ("n" "Agenda and all TODOs" ((agenda "") (todo "TODO")))
         ("w" "Agenda and all WAITINGSs" ((agenda "") (todo "WAITING")))
         ("p" "Private Agenda" ((agenda "" ((org-agenda-files '("~/Dropbox/org/p/gtd.org" "~/Dropbox/org/tickler.org"))))
-                                      (todo "WIP" ((org-agenda-files '("~/Dropbox/org/p/gtd.org"))))
-                                      (todo "TODO" ((org-agenda-files '("~/Dropbox/org/p/gtd.org"))))
-                                      (todo "ONHOLD" ((org-agenda-files '("~/Dropbox/org/p/gtd.org"))))
-                                      ))
+                               (todo "WIP" ((org-agenda-files '("~/Dropbox/org/p/gtd.org"))))
+                               (todo "TODO" ((org-agenda-files '("~/Dropbox/org/p/gtd.org"))))
+                               (todo "ONHOLD" ((org-agenda-files '("~/Dropbox/org/p/gtd.org"))))
+                               ))
         ("c" "Agenda for contentful" ((agenda "" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org" "~/Dropbox/org/tickler.org"))))
                                       (tags-todo "sprint" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
                                       (todo "WIP" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
                                       (todo "TODO" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
                                       (todo "ONHOLD" ((org-agenda-files '("~/Dropbox/org/contentful/contentful_gtd.org"))))
-                                      ))))
+                                      ))
+        ("g" "Agenda for GuardRails" ((agenda "" ((org-agenda-files '("~/Dropbox/org/GuardRails/gr_gtd.org" "~/Dropbox/org/tickler.org"))))
+                              (todo "WIP" ((org-agenda-files '("~/Dropbox/org/GuardRails/gr_gtd.org"))))
+                              (todo "TODO" ((org-agenda-files '("~/Dropbox/org/GuardRails/gr_gtd.org"))))
+                              (todo "ONHOLD" ((org-agenda-files '("~/Dropbox/org/GuardRails/gr_gtd.org"))))
+                              ))))
 
 (setq org-startup-truncated t)
 
@@ -110,5 +127,6 @@
      (concat "[[" url "][\#"id"]]")) ))
 
 (global-set-key (kbd "H-i") 'at/insert-org-link)
+(global-set-key (kbd "H-c") 'org-mac-chrome-insert-frontmost-url)
 
 (add-hook 'org-mode-hook 'turn-on-flyspell)
