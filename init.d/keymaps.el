@@ -17,7 +17,6 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "M-;") 'comment-line)
 
-(global-set-key (kbd "H-e") 'mu4e)
 
 (windmove-default-keybindings 'hyper)
 (global-unset-key (kbd "C-z"))
