@@ -1,4 +1,7 @@
-;; (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-unset-key (kbd "M-t"))
+(global-set-key (kbd "M-t") 'helm-find-files)
+
 
 (setq mac-option-key-is-meta nil)
 (setq ns-function-modifier 'hyper)
