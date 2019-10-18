@@ -1,6 +1,7 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-unset-key (kbd "M-t"))
 (global-set-key (kbd "M-t") 'helm-find-files)
+(global-set-key (kbd "M-p") 'helm-projectile)
 
 
 (setq mac-option-key-is-meta nil)
@@ -53,8 +54,6 @@
 (global-set-key [(control shift up)]  'at/move-line-up)
 (global-set-key [(control shift down)]  'at/move-line-down)
 
-;; Opens the dash documentation
-(global-set-key "\C-cd" 'dash-at-point)
 
 ;; org global capture
 (define-key global-map (kbd "C-c c") 'org-capture)
