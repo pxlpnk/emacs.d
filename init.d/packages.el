@@ -24,6 +24,8 @@
 (use-package helm-ag
   :ensure t)
 
+(use-package helm-projectile)
+
 (use-package projectile)
 (use-package undo-tree)
 (use-package magit)
@@ -37,7 +39,13 @@
     (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)))
 
 (use-package org)
-;; (use-package org-plus-contrib)
+
+(use-package company
+  :ensure t
+  :config
+  (progn (add-hook 'after-init-hook 'global-company-mode)))
+(use-package company-terraform)
+(use-package terraform-mode)
 
 (use-package beacon
   :ensure t
@@ -58,6 +66,12 @@
   :ensure t
   :config
   :init (global-flycheck-mode))
+
+(use-package flycheck-golangci-lint)
+(use-package flycheck-rust)
+(use-package flycheck-gometalinter)
+(use-package flycheck-yamllint)
+
 
 
 (use-package yasnippet
@@ -84,3 +98,9 @@
   :ensure t
   :config
   (editorconfig-mode 1))
+
+
+(use-package rust-mode)
+(use-package rubocopfmt)
+(use-package use-package)
+(use-package hcl-mode)
