@@ -52,6 +52,10 @@
   :config
   (progn (beacon-mode 1)))
 
+(use-package modus-operandi-theme
+  :ensure t)
+
+
 (use-package yasnippet)
 (use-package yasnippet-snippets)
 
