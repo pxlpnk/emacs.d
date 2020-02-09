@@ -2,11 +2,8 @@
   :ensure t
   :config
   (progn
-    (exec-path-from-shell-copy-env "GOPATH")
-    (when (memq window-system '(mac ns x))
-      (exec-path-from-shell-initialize))))
-
-
+    (exec-path-from-shell-initialize)
+    (exec-path-from-shell-copy-env "GOPATH")))
 
 
 (use-package smartparens
@@ -21,13 +18,14 @@
 (use-package rainbow-delimiters)
 
 (use-package helm)
+(use-package ag)
 (use-package helm-ag
   :ensure t)
 
 (use-package helm-projectile)
 
 (use-package projectile)
-(use-package undo-tree)
+;;  (use-package undo-tree)
 (use-package magit)
 (use-package multiple-cursors
   :ensure t
@@ -44,6 +42,7 @@
   :ensure t
   :config
   (progn (add-hook 'after-init-hook 'global-company-mode)))
+(use-package company-go)
 (use-package company-terraform)
 (use-package terraform-mode)
 
@@ -64,6 +63,7 @@
   :ensure t
   :config
   (progn (add-hook 'go-mode-hook 'go-eldoc-setup)))
+
 (use-package yaml-mode)
 
 (use-package flycheck
@@ -72,8 +72,9 @@
   :init (global-flycheck-mode))
 
 (use-package flycheck-golangci-lint)
-(use-package flycheck-rust)
 (use-package flycheck-gometalinter)
+
+(use-package flycheck-rust)
 (use-package flycheck-yamllint)
 
 

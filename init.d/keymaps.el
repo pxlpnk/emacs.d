@@ -1,4 +1,4 @@
-(global-set-key (kbd "M-x") 'helm-M-x)
+;; (global-set-key (kbd "M-x") 'helm-M-x)
 (global-unset-key (kbd "M-t"))
 (global-set-key (kbd "M-t") 'helm-find-files)
 (global-set-key (kbd "M-p") 'helm-projectile)
