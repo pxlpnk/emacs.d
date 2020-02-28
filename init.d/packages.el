@@ -36,11 +36,20 @@
 (use-package helm-ag
   :ensure t)
 
+(use-package projectile
+  :config
+  (projectile-mode +1)
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
+
 (use-package helm-projectile)
 
-(use-package projectile)
-;;  (use-package undo-tree)
+(use-package undo-tree
+  :init
+  (global-undo-tree-mode))
+
 (use-package magit)
+(use-package swiper)
 (use-package multiple-cursors
   :ensure t
   :config
