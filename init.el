@@ -11,5 +11,6 @@
 (load "~/.emacs.d/init.d/cosmetics.el")
 (load "~/.emacs.d/init.d/org.el")
 (load "~/.emacs.d/init.d/git.el")
+(load "~/.emacs.d/init.d/zetteldeft.el")
 
 (server-mode)

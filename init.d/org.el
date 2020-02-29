@@ -38,11 +38,16 @@
 (global-set-key (kbd "C-c g") 'at/gtd)
 (global-set-key (kbd "C-c b") 'at/org-iswitchb)
 
+
+
 (setq org-capture-templates
   '( ("t" "Todo" entry (file+headline "~/Dropbox/org/inbox.org" "Tasks")
        "* TODO %? :TODO:\n  %i\n")
+     ("l" "Link" entry (file ,"~/Dropbox/org/inbox.org")
+         "* TODO %(org-cliplink-capture)" :immediate-finish t)
      ("n" "Note" entry (file+headline "~/Dropbox/org/inbox.org" "Notes")
-       "* %? :NOTE:\n%U\n")))
+       "* %? :NOTE:\n%U\n"))
+  )
 
 (setq org-directory "~/Dropbox/org/")
 
