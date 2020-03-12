@@ -96,3 +96,12 @@
 (global-set-key (kbd "H-c") 'org-mac-chrome-insert-frontmost-url)
 
 (add-hook 'org-mode-hook 'turn-on-flyspell)
+
+
+(defun at/org-agenda-process-inbox-item ()
+  "Process a single item in the org-agenda."
+  (interactive)
+  (org-with-wide-buffer
+   (org-agenda-set-tags)
+   (org-agenda-priority)
+   (org-agenda-refile nil nil t)))

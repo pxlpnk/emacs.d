@@ -17,7 +17,7 @@
   :hook
   (after-init . org-roam-mode)
   :commands (org-roam-build-cache)
-  :straight (:host github :repo "jethrokuan/org-roam" :branch "develop")
+  :straight (:host github :repo "jethrokuan/org-roam" :branch "master")
   :custom
   (org-roam-directory "~/org/p/notes")
   :bind (:map org-roam-mode-map
@@ -29,8 +29,24 @@
   :custom-face
   (org-roam-link ((t (:inherit org-link :foreground "#C991E1")))))
 
+(use-package company-org-roam
+  :straight nil
+  :after org-roam company org
+  :config
+  (company-org-roam-init))
+
+(with-eval-after-load 'org-roam
+  (with-eval-after-load 'company
+    (with-eval-after-load 'org
+      (require 'company-org-roam)
+      (company-org-roam-init))))
 
 
+
+
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
 
 (use-package avy
   :ensure t)
