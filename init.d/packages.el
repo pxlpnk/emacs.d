@@ -42,6 +42,11 @@
       (company-org-roam-init))))
 
 
+(with-eval-after-load 'org-roam
+  (with-eval-after-load 'company
+    (with-eval-after-load 'org
+      (require 'company-org-roam)
+      (company-org-roam-init))))
 
 
 (use-package doom-modeline
@@ -112,8 +117,10 @@
   :ensure t
   :config
   (progn (add-hook 'after-init-hook 'global-company-mode)))
+
 (use-package company-go)
 (use-package company-terraform)
+
 (use-package terraform-mode)
 
 (use-package beacon
