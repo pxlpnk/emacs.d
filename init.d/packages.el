@@ -29,11 +29,6 @@
   :custom-face
   (org-roam-link ((t (:inherit org-link :foreground "#C991E1")))))
 
-(use-package company-org-roam
-  :straight nil
-  :after org-roam company org
-  :config
-  (company-org-roam-init))
 
 (with-eval-after-load 'org-roam
   (with-eval-after-load 'company
