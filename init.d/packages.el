@@ -78,7 +78,17 @@
 
 (use-package rainbow-delimiters)
 
-(use-package helm)
+(use-package helm
+  :config
+  (progn
+    (require 'helm-config)
+    (global-set-key (kbd "M-x") #'helm-M-x)
+    (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+    (global-set-key (kbd "C-x C-f") #'helm-find-files)
+    (global-set-key (kbd "M-B") #'helm-buffers-list)
+    (helm-mode 1)
+    ))
+
 (use-package ag)
 (use-package helm-ag
   :ensure t)
@@ -89,7 +99,10 @@
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
-(use-package helm-projectile)
+(use-package helm-projectile
+  :config
+  (progn
+    (helm-projectile-on)))
 
 (use-package undo-tree
   :init
@@ -123,9 +136,11 @@
   :config
   (progn (beacon-mode 1)))
 
-(use-package modus-operandi-theme
-  :ensure t)
+;; (use-package modus-operandi-theme
+;;   :ensure t)
 
+(use-package dracula-theme
+  :ensure t)
 
 (use-package yasnippet)
 (use-package yasnippet-snippets)
